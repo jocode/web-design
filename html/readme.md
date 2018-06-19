@@ -1,0 +1,146 @@
+# HTML
+
+HTML, sigla en inglés de **HyperText Markup Language**, hace referencia al lenguaje de marcado para la elaboración de páginas web.
+Es la estructura básica de un sitio web, es decir, los elementos que conforman una página web. *El HTML le da la estructura a la página web*.
+
+*Ver* [HTML Mozilla Developer Network (MDN)](https://developer.mozilla.org/es/docs/Web/HTML)
+
+La estructura de cómo se escribe HTML es de la siguiente manera. Etiqueta de apertura y etiqueta de cierre. 
+Cada etiqueta puede tener unos atributos que describen a esa etiqueta.
+```html
+<etiqueta atributo="valor">..Contenido..</etiqueta>
+```
+
+La estructura básica de un sitio web es la siguiente.
+
+```html 
+<!DOCTYPE html> <!-- Indica que es HTML 5 -->
+<html lang="es">
+<head>
+	<meta charset="utf-8"> <!-- Especifica la codificación de las páginas web -->
+	<title>Hola Mundo en HTML</title>
+</head>
+<body>
+	Aquí va el contenido del sitio web.
+</body>
+</html>
+```
+
+Los comentarios, es código que el navegador no va a interpretar. En HTML los comentarios se escriben siguiendo la siguiente estructura `<!-- comentario -->`
+
+
+## Encabezados (`<h1></h1>`)
+Indican los títulos y subtítulos de las páginas.
+Los encabezados se ordenan de 1 a 6, el primero es más importante y tendrá un tamaño mayor por defecto. Se recomienda sólo dejar un `h1` (Google no lo permite, y está mal es tu SEO "Search Engine Optimization", posicionamiento en buscadores) y respetar e orden en que se escriben.
+
+## Párrafos (`<p></p>`)
+Si queremos que la línea sea independiente de otras, podemos especificar que es un párrafo encerrándola con una etiqueta de elemento de párrafo (`<p>`)
+Esta etiqueta respeta los espacios entre los textos, los párrafos.
+
+La etiqueta `<br/>` sirve para dar saltos de línea.
+
+## Etiquetas de Texto
+Las reglas semánticas sirven para darle una estructura mejor definida al sitio web, esto es fundamental para el posicionamiento en buscadores.
+- `<b> </b>` Bold/Negritas SIN importancia semántica
+- `<strong></strong>` Bold/Negritas CON importancia semántica
+- `<i></i>` Itálica SIN importancia semántica
+- `<em></em>` (Énfasis) Itálica CON importancia semántica
+- `<small></small>` Agrega texto pequeño
+- `<mark></mark>` Agrega texto marcado, con línea amarilla
+- `<del></del>` Texto tachado
+- `<ins></ins>` Mostrar al usuario que hemos agregado un texto
+- `<sub></sub>` Agrega texto pequeño abajo, como subindice
+- `<sup></sup>` Agrega Texto pequeño arriba, como superíndice
+
+## Enlaces (`<a href="link"><a>`)
+La etiqueta `<a href=""></a>` ancla, y creará un hipervínculo en la parte del texto encerrado entre las etiquetas.
+- **href:** El valor de este atributo indica la dirección web a la que se quiera que punte el enlace
+- **target:** El atributo target especifica el contexto de navegación que será usado para mostrar el enlace. 
+- **title:** El atributo title añade información adicional sobre el enlace, como puede ser el título de la página que estás enlazando. Esta información aparecerá cuando se le pase el ratón por encima.
+
+## Listas (`ul, ol`)
+Son un conjunto de elementos ordenados uno debajo de otro 
+- **Lista Desordenada**  `<ul></ul>` Son aquellas que no tienen ningún orden
+Los elementos de la listas son puestas con `<li></li>`
+- **Lista Ordenada** `<ol></ol>` Son listas que están enumeradas, viene del inglés ordered list
+
+Nosotros podemos anidar listas, por ejemplo agregar una lista dentro de otra
+
+## Imágenes (`<img src="">`)
+La etiqueta imagen permite cargar imágenes y mostrarlas en el sitio web.
+- **src:** El atributo `source` indica el recurso, la ruta en donde se encuentra la imagen, debe tener la extensión del archivo
+- **alt:** Es el texto alternativo, en caso de que no se cargue la imagen
+- **title** Es el texto de título, aparece cuando el usuario pasa el mouse por encima de la imagen
+
+Es recomendable usar los atributos `alt` y `title`
+
+## Tablas (`<table></table>`)
+Son elementos en html que nos permite agregar información de una manera organizada por filas y columnas.
+
+Las tablas se construyen por filas y columnas
+La estructura de una tabla es de la siguiente manera
+```html
+<table>
+	<!-- Encabezado de la tabla -->
+	<thead>
+		<tr>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<!-- Cuerpo de la página -->
+	<tbody>
+		<!-- Filas -->
+		<tr>
+			<!-- Columnas -->
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+```
+
+## Formulario (`<form></form>`)
+Básicamente en ellos se incluyen los elementos con los que el usuario puede interactuar, como botones, campos de texto, listas de chequeo, etc.
+
+Los atributos del la etiqueta `<form></form>` son los siguientes 
+- **action**: Indica hacia que archivo enviará los datos del formulario
+- **method**: Establecer por qué vía enviar los datos (Get o Post)
+
+Algunos campos del formulario son:
+- **input** `<input />`: Permite ingresar datos en una caja de texto.
+	* `name` Indica el nombre del elemento, éste se recibirá como tipo clave => valor en el servidor 
+	* `type` Indica el tipo de entrada, el tipo de elemento por ejemplo, de texto, número, contraseña, email, etc.
+	* `value` Define un valor por defecto en el elemento 
+	* `placeholder` Coloca un texto opaco que se quita al escribir algo. Sirve para especificar los campos de los formularios.
+	* `maxlength` Establecemos cuántos caracteres queremos permitir
+	* `size` Cambiamos el tamaño de nuestro input
+	* `required` Forzamos al usaurios a llenar ese formulario, sirve como validación del lado de cliente
+	* `readonly` Nos permite leer sólamente la información
+	* `disabled` Deshabilita un campo
+
+
+Los input de tipo *submit* es un botón, que sirve para enviar los datos del formulario
+
+- **select** `<select></select>` Nos permite escoger una opción de una serie se opciones, como una menú desplegable.
+
+- **label** `<label></label>` Con este elemento podemos agregarle un texto descriptivo a un campo del formulario
+
+- **radio button** `<input type="radio" name="">` Estos elementos nos permiten escoger una sola opción entre muchas. Aquí debemos colocar el nombre igual a la cantidad de opciones que tengamos, para relacionarlas.
+
+- **checkbox** `<input type="checkbox" name="">` Son usados como listas de chequeo, aquí podemos seleccionar muchas opciones a la vez.
+
+- **input password** `<input type="password" name="">` Nos permite crear un campo para contraseña, de esta manera nos oculta la contraseña que digitamos reemplazando los caracteres por puntos
+
+- **input color** `<input type="color">` Nos permite escoger un color en valor hexadecimal
+
+- **input number** `<input type="number" name="">` Este campo de formulario solo nos permite ingresar números 
+
+- **input range** `<input type="range" name="">` Nos muestra una barra para escoger un rango.
+
+- **input url** `<input type="url" name="">` Este campo permite el ingreso de una url, si no es url muesta error.
+
+
+*Para más información ir a:* [input HTML | MDN](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input) 
+
+*Para ver qué tecnologías son soportadas por los diferentes navegadores, visitar el sitio web:* [Can I Use](https://caniuse.com)
