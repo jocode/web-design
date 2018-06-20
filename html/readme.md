@@ -144,3 +144,32 @@ Los input de tipo *submit* es un botón, que sirve para enviar los datos del for
 *Para más información ir a:* [input HTML | MDN](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input) 
 
 *Para ver qué tecnologías son soportadas por los diferentes navegadores, visitar el sitio web:* [Can I Use](https://caniuse.com)
+
+
+## Etiquetas para citas (`<blockquote></blockquote>`)
+Esta etiqueta nos permite citar algún autor, libro, etc. Lo que hace es agregar espacio a la derecha y a la izquierda.
+
+- **`<hr>`** Esta etiqueta agrega una línea horizontal, separando dos párrafos
+- **`<cite></cite>`** Permite agregar una cita, lo que hace es colocar la letra como itálica o cursiva
+
+## Meta Etiquetas
+Las etiquetas Meta o meta etiquetas, viene meta de "metainformation" - metainformación. Sirve para aportar información sobre el documento.
+
+- **meta:keywords** `<meta name="keywords" content="tags">` Esta etiquetas nos permite agregar palabras clave a nuestro sitio web, para que pueda ser indexado por algunos buscadores. 
+Google antiguamente la usaba para indexar los sitios web, pero actualmente cambiaron el algoritmo de busqueda omitiendo esta etiqueta.
+
+- **meta:description** `<meta name="description" content="Descripción del sitio web">` Esta etiqueta es tenida en cuenta por los buscadores, lo que tienes que colocar en content, es la descripción de lo que és tu sitio web, lo recomendable es no execederse de los 170 caracteres.
+
+- **meta:author** `<meta name="author" content="name author">` Esta etiqueta nos permite establecer el autor del sitio web
+
+- **meta:viewport** `<meta name="viewport"...>` Esta etiqueta es muy importante para indicar que el sitio web es adaptable, aquí se definen los parámetros para que el sitio web tenga un diseño responsivo.
+
+## Atributos id - class
+- **id** Me permite agregar un identificador al elemento. Sirve para diferenciar este elementos del resto que tenemos en nuestra página web. Sirve para acceder a los elementos del DOM (Document Object Model)
+Es importante colocar el **id una sola vez**
+
+- **class** Con este atributo podemos identificar varios elementos con una característica en especial, por ejemplo, botón de color rojo.
+
+## Audio `<audio></audio>`
+Nos permite agregar archivos multimedia de audio que podemos reproducir en los sitios web.
+- `controls` Es un atributo de este elemento que nos permite agregar controles al reproductor
