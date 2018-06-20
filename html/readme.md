@@ -173,3 +173,50 @@ Es importante colocar el **id una sola vez**
 ## Audio `<audio></audio>`
 Nos permite agregar archivos multimedia de audio que podemos reproducir en los sitios web.
 - `controls` Es un atributo de este elemento que nos permite agregar controles al reproductor
+
+## Video `<video></video>`
+Esta etiqueta nos permite agregar un vídeo.
+
+## Imágenes SVG (Scalable Vector Graphics) `<svg></svg>`
+SVG (Scalable Vector Graphics) es un formato vectorial poco conocido pero muy útil para su uso online por su flexibilidad y por la capacidad de ofrecer gráficos con calidad.
+Es parcialmente implementado en los principales navegadores como Firefox, Opera, navegadores WebKit, Internet Explorer y otros.
+
+Para agregar archivos `svg` al navegador lo podemos agregar como imágenes con la etiqueta `<img src="">` o directamente colocando el código svg que tiene la imagen.
+
+> Los archivos Gráficos vectoriales escalables (SVG) son más livianos que los mapas de bits como png, o jpeg
+
+## Etiquetas de maquetado
+Son aquellas que nos van a servir de contendedores para las demás etiquetas y elementos.
+- **div** `<div></div>` Nos sirve de contenedor para los demas elementos, es un contenedor general. NO tiene sentido semántico
+
+A partir de HTML5 se agregan nuevas etiquetas contenedoras
+
+- **header** `<header></header>` Nos permite agregar el encabezado de nuestra página
+- **nav** `<nav></nav>` Se usa para la creación de menús de navegación
+- **section** `<section></section>` Establece una sección en nuestro sitio web
+- **article** `<article></article>` Nos permite agregar contenido, por ejemplo para identificar un artículo
+- **aside** `<aside></aside>` Nos sirve para agregar contenido fuera del contenido principal, por ejemplo barras laterales, etc.
+- **footer** `<footer></footer>` Con esta etiqueta nos sirve para indicar el pie de página
+
+Los elementos anteriores son semánticos y, son tenidos en cuenta por los buscadores para hacer el ranking de los sitios web y posicionarlos.
+
+[Ejemplo de etiquetas de maquetado](html/etiquetas-maquetado.html)
+
+> Los Elementos Semanticos son aquellos que definen cual es el contenido que tendran dentro, y le sirven a los buscadores y navegadores web
+
+## Diferencias entre div - section - article 
+Todos ellos son contendedores, sin embargo hay una diferencia en la semántica, estos elementos son abstraidos de la realidad, por lo que solo es hacer la analogía para entenderlos mejor.
+- `div` Es un contendedor general, sirve para cualquier cosa, pero no me dice que contenido es el que lleva dentro de él, es decir, no me da una referencia al contenido.
+- `section` Se definen secciones que tenga nuestro sitio web, por ejemplo la sección trabajos, acerca de o contacto.
+- `article` Aquí es importante colocar lo que se refiere a un articulo, productos, etc. De esta manera podemos establecer una mejor coherencia en el contenido de nuestra página web.
+
+## Etiqueta `iframe` y `span`
+
+- **iframe** `<iframe src=""></iframe>` Nos permite agregar (embeber) una página web dentro de otra. 
+Esta etiqueta se utiliza en algunos casos por ejemplo para agregar videos de youtube, vimeo, post de twitter e instagram.
+
+- **span** `<span></span>` Esta etiqueta es denominada en línea, es decir no cambia el contenido que la contiene, por ejemplo algun espacio. Se utiliza para darle estilo a algún texto es especial, como un color o algún otro estilo con css.
+
+## Etiqueta `script` y `noscript`
+
+- **noscript** `<noscript></noscript>` Ejecuta o muestra un mensaje, si el usuario no tiene activado javascript.
