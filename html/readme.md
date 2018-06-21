@@ -220,3 +220,26 @@ Esta etiqueta se utiliza en algunos casos por ejemplo para agregar videos de you
 ## Etiqueta `script` y `noscript`
 
 - **noscript** `<noscript></noscript>` Ejecuta o muestra un mensaje, si el usuario no tiene activado javascript.
+
+## Incustar video de youtube o vimeo
+Los videos de insertan con la etiqueta `<iframe src=""></iframe>`, solo basta con ir al Youtube, o Vímeo y dar el el botón de compartir.
+Allí nos aparece la opción de incrustar vídeo, copiamos el código y lo pegamos en nuestro sitio web y ya queda.
+
+## Agregar ícono al sitio web. (Favicon)
+Se recomienda usar un ícono cuadrado, para que no se deforme.
+Para crear una imagen con la extensión `.ico`,  solo basta con buscar en Google **favicon generator** y luego cargamos la imagen que queramos que se genere como ícono.
+
+Finalmente incluimos la imagen en nuestro sitio web y la agregamos a nuestro sitio web usando la siguiente línea de código:
+`<link rel="shorcut icon" type="image/x-icon" href="imagenes/favicon.ico">`
+
+Hay varias formas de agregar íconos, dependiendo del navegador o dispositivo que se utilice:
+```html 
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="
+https://www.mozilla.org/media/img/favicon/apple-touch-icon-180x180.8772ec154918.png">
+<link rel="icon" type="image/png" sizes="196x196" href="https://www.mozilla.org/media/img/favicon/favicon-196x196.c80e6abe0767.png">
+<link rel="shortcut icon" href="https://www.mozilla.org/media/img/favicon.d4f1f46b91f4.ico">
+```
+1. `apple-touch-icon` Ícono para Dispositivos Apple 
+2. `icon` Ícono usando una imagen de tipo png 
+3. `shortcut icon` Ícono usando una imagen de tipo `.ico`
+
