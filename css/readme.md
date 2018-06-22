@@ -65,3 +65,18 @@ h1, h2, h3 {
 - **Selectores de atributos** `input[type]{  }`  y `input[type="text"]{  }` Selecciona a los elementos en los que le especifiquemos lo atributos
 
 _**Herencia**_ Los estilos que se apliquen a un selector padre afectarán a todos los selectores que los contengan. Por ejemplo, si yo le coloco un `color: blue` al `body` todos los textos serán de color azul, a menos que alguno de ellos tenga sus propios estilos.
+
+## Propiedades  CSS - Fondos
+
+- **background** Esta propiedad nos permite agregar fondos
+- **background-repeat** Establece si queremos repetir un background, por defecto es `repeat`.
+`background: repeat | no-repeat | repeat-x | repeat-y;`
+- **background-size** Establece el tamaño del fondo
+`background-size: auto | 100px 100px | 100% 100% | cover | contain;`
+- **background-attachment** Establece si el fondo se puede hacer scroll o sólo el contenido
+`background-attachment: scroll | fixed ;`
+- **background-position** Modifica la posición de nuestro fondo
+`background-position: center center | 100px 100px` *(horizontal vertical)*
+
+Generalmente las imágenes tienen un peso considerable, por eso, hay una opción que es tomar una imagen pequeña y hacer un truco, que consiste en repetir `repeat` esa imagen y con eso, tenemos un diseño bonito como fondo.
+Una página muy útil para esos patrones repetitivos es [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/)
