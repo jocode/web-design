@@ -1,0 +1,41 @@
+/* Selector Universal */
+* {}
+
+/* Selectores de Etiqueta */
+h1 {
+	color: blue;
+}
+
+h2, h3, h4 {
+	color: green;
+}
+
+/*Selector descendente*/
+div p {
+	font-size: 15px;
+	color: black;
+}
+
+div p a {
+	color: red;
+}
+
+/*Selectores de Clase*/
+.grande {
+	font-size: 28px;
+}
+
+/*Selectores por id - identificador*/
+#rojo {
+	color: red;
+}
+
+/*Selectores de hijos*/
+div > p {
+	font-size: 20px;
+}
+
+/*Selectores de atributos*/
+input[type]{  }
+
+input[type="text"]

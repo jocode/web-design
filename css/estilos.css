@@ -1,0 +1,10 @@
+/**
+* Estructura de una regla CSS
+* body -> Selector: Es el elemento al que queremos aplicar los estilos
+* color -> Propiedad: Son las caracerísticas que quieres cambiar de ese elemento
+* blue -> Valor: Valor que le queremos dar a la propiedad
+*/
+
+h1 {
+	color: magenta;
+}
