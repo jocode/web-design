@@ -181,3 +181,47 @@ La propiedad **display** nos permite modificar la forma de cómo están ubicados
 ```css 
 display: inline; /* block | inline | flex | table | inline-block | initial | inherit | all | inline-flex | inline-table */
 ```
+
+## Diseñando botones
+Hay una página para generar una paleta de colores. [Coolors](https://coolors.co/)
+En este ejercicio, hemos diseñado unos [Botones](botones.html), usando css y usando la paleta de colores que buscamos en la página mencionada.
+
+## Posicionamiento de cajas `position: static;`
+Nosotros podemos ubicar las cajas en la pantalla haciendo uso de algunas propiedades como:
+
+- Tipos de Posicionamiento:
+	- **Normal `(static)`**: Posicionamiento por defecto con el que los navegadores acomodan los elementos
+	- **Relativo `(relative)`**: Nos permite posicionar una caja y despues moverla desde su lugar original.
+	- **Abosluto `(absolute)`**: Nos permite posicionar una caja respecto a su contenedor y el resto de elementos ignoran la nueva posicion.
+	- **Fijo `(fixed)`**: Nos permite posicionar una caja en donde su posicion respecto a la pantalla del usuario siempre va a ser la misma.
+	- **Flotante `(float)`**: Nos permite desplazar las cajas todo lo posible hacia la derecha o izquierda.
+
+
+- Las propiedades para posicionamiento son:
+	- `top: 100px`
+	- `bottom: 100px`
+	- `right: 100px`
+	- `left: 100px`
+
+Con los valores que le demos a estas propiedades podemos desplazar las cajas.
+
+> Si se tiene una caja Padre con posición relative, y dentro una caja hija con posición absolute, podemos acomodar la caja hija en el espacio de la caja padre.
+
+Para poner una caja a un lado de otra cuando son de tipo bloque, usamos la propiedad **float** y podemos darle dirección `float: right | left`.  De esta manera están construidos muchos sitios web, en los que seccionan cada elemento como columnas.
+
+## Posicionamiento flotante `float: left | right`
+La propiedad **float** Se creó para colocar texto alrededor de la imagen, no para maquetar sitios web. Sim embargo ha sido utilizada para organizar el contenido web usando la propiedad `float`.
+
+Si queremos organizar las cajas en un contenedor, debemos crear un contenedor y colocarle una propiedad llamada **overflow** con el valor **hidden** `overflow: hidden;` de esta manera solucionamos un error, que es no mostrar el fondo del contendor padre al organizar las cajas con la propiedades **float**
+Un ejemplo lo podemos ver en el ejemplo [posicionamiento-flotante.html](posicionamiento-flotante.html)
+
+## Visualización
+¿Cómo se verán los elementos en la página (Ocultar)?
+
+- **display** `display: block;` Esta propiedad, permite ocultar y quitar  los espacios (NO PERMANECEN) que ocupaban los elementos.
+
+- **visibility** `visibility: hidden;` Con esta propiedad ocultamos los elementos pero se PERMANECEN los espacios que ocupan.
+
+- **overflow** `overflow: hidden;` Oculta todo el contenido que se desborde de la caja, es decir, que se salga del contenedor.
+
+- **z-index** `z-index: 10;` Con esta propiedad decidimos cuál elemento queremos que esté po encima del otro. El valor mayor es el que estará por encima de los demás
