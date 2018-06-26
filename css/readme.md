@@ -225,3 +225,34 @@ Un ejemplo lo podemos ver en el ejemplo [posicionamiento-flotante.html](posicion
 - **overflow** `overflow: hidden;` Oculta todo el contenido que se desborde de la caja, es decir, que se salga del contenedor.
 
 - **z-index** `z-index: 10;` Con esta propiedad decidimos cuál elemento queremos que esté po encima del otro. El valor mayor es el que estará por encima de los demás
+
+## Galería de Imágenes 
+Se ha hecho una breve práctica sobre una galería de imágenes es este archivo [Galería](galeria.html)
+
+## Sombras
+Podemos darle sombras a los textos y cajas usando las siguientes propiedades:
+
+- **text-shadow** (Para Texto) `text-shadow: 0px 0px 10px #000;` Los valores para esta propiedad son `horizontal` - `vertical` - `tamaño de la sombra` (Con este valor la sombra de difumina) - `color` 
+
+- **box-shadow** (Para las cajas)  `box-shadow: 0 5px 10px rgba(0,0,0,.5);` Se colocan cuatro parámetros como valores al igual que la anterior: `horizontal - vertical - tamañosombra - color`.
+
+## Bordes y bordes redondeados
+Existen distintos tipos de bordes que podemos usar en CSS, también podemos usar la propiedad `border-radius` para dar un borde con esquinas redondeadas.
+
+- Tipos de Bordes **`border`**
+	- **solid** Tiene una línea sólida
+	- **dotted** Línea punteada
+	- **dashed** Línea con guiones
+	- **double** Doble línea
+	- **groove** Efecto en 3D con profundidad
+	- **ridge** Efecto 3D con profundidad
+	- **inset** Borde con relieve hacia afuera
+	- **outset** Borde con relieve hacia adentro
+
+- Bordes redondeados **`border-radius`**
+	Podemos darle bordes redondeados a las cajas usando la propiedades `border-radius: value;`
+	Para volver un div como círculo, debemos tener un tamaño cuadrado y usar esta propiedad  colocando un valor de 100%, de la siguiente forma:
+
+```css 
+border-radius: 100%;
+```
