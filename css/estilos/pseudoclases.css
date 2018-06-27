@@ -1,0 +1,44 @@
+body {
+	font-family: Arial, Sans-serif;
+}
+
+a {
+	background: #4357ad;
+	padding: 20px 30px;
+	display: inline-block;
+	font-size: 20px;
+	color: white;
+}
+
+a:hover {
+	background: #009ddc;
+}
+
+a:active {
+	background: black;
+}
+
+/*a:visited {
+	background: red;
+}*/
+
+div {
+	width: 500px;
+}
+
+div p:hover {
+	background: black;
+	color: white;
+}
+
+div p:first-line {
+	background: #3a3a3a;
+	color: white;
+	font-size: 20px;
+}
+
+div p:nth-child(2) {
+	background: #009ddc;
+	color: white;
+	padding: 10px;
+}

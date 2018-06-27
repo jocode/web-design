@@ -256,3 +256,45 @@ Existen distintos tipos de bordes que podemos usar en CSS, también podemos usar
 ```css 
 border-radius: 100%;
 ```
+
+## Pseudoclases `:pseudoclaese`
+Son estados que pueden tener nuestros elementos en diferentes situaciones.
+
+- Algunos tipos de pseudoclases son:
+	- **hover** `a:hover {}` Aplica los estilos cuando pasamos el mouse por encima de un enlace
+	- **link** `a:link {}` Aplica estilos a enlaces que no hemos visitado.
+	- **visited** `a:visited {}` Aplica estilos a enlaces que ya hayan sido visitados.
+	- **active** `a:active {}` Estado de un enlace cuando estemos dando clic.
+	**first-line** `p:first-line {}` Selecciona la primera línea de algún párrafo o texto.
+	**nth-child()** `p:nth-child(2) {}` Selecciona y aplica estilos a un elemento en común, el que le especifiquemos entre paréntesis (En este ejemplo selecciona el párrafo `<p></p>` número 2)
+
+## Pseudoelementos `::pseudoelemento`
+Nos permiten seleccionar ciertas partes de algunos elementos	
+
+- Algunos Pseudoelementos son:
+	- **first-letter** `selector::first-letter {}` Selecciona la primera letra que esté dentro del elemento
+
+	- **first-line** `selector::first-line {}` Selecciona la primera línea de texto del elemento
+
+	- **selection** `selector::selection {}` Aplica estilos a algún objeto seleccionado
+
+	- **before** `selector::before {}` Agrega un elemento antes de la caja. Se *debe* agregar la propiedad `content: '';` por obligación
+
+	- **after** `selector::after {}` Agrega un elemento después de la caja. Se *debe* agregar la propiedad `content: '';` por obligación
+
+## Listas 
+Podemos cambiar los estilos de viñetas para las listas, usando la propiedad `list-style`.
+
+- Algunos tipos de listas son:
+
+	- **Graficos:**
+	`list-style: none | disc | circle | square`
+
+	- **Numericos:**
+	`list-style: decimal | decimal-leading-zeo | lower-roman | upper-roman | lower-latin | upper-latin`
+
+También podemos colocar imágenes personalizadas, usando la propiedad `list-style-image`, colocando la ruta de la imagen:
+```css 
+list-style-image: url(../img/checked.png);
+```
+
