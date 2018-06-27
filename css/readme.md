@@ -298,3 +298,121 @@ También podemos colocar imágenes personalizadas, usando la propiedad `list-sty
 list-style-image: url(../img/checked.png);
 ```
 
+## Menú de navegación
+Los menús se navegación se hacen con listas. La clave en los menús es colocar la propiedad `display: inline-block;` en los **item de listas `li`** para que se ordenen en línea y sean de tipo bloque y, colocar los **enlaces** con la propiedad tipo `display: block;` para poder agregarle el padding.
+
+- **li** `display: inline-block;`
+
+- **li a** `display: block;`
+
+*Ver ejemplo de menú en* [menu.css](estilos/menu.css)
+
+## Tablas
+La propiedades **border** permite darle un borde a la tabla, pero si le damos un borde a cada celda vamos a tener un borde doble. Para quitarlo sólo debemos usar la propiedades **border-collapse** `border-collapse: collapse;`, de esta manera obtendremos un solo borde, siendo un  diseño mas estilizado.
+*Ver archivo* [tablas.css](estilos/tablas.css)
+
+## Formulario
+Una de las propiedades que nunca debe faltar en los formularios en **box-sizing**. Con ella limitamos el tamaño de los input, es decir, si queremos que tenga un ancho de 200px, sea de 200px sin importar el padding que incluyamos.
+```css 
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+```
+
+*Ver ejemplo de formulario* [formulario.css](formulario.css)
+
+## Transform `transform: scale(1,1)`
+Nos permite transformar, dar interactividad a los elementos como trasladarlos, rotarlos. Es ideal para animaciones.
+
+- Cosas que podemos hacer con transform:
+	- Trasladar elementos `translate(200px, 50px)` *values: x, y*
+	- Escalar Elementos `scale(1,1)` *values: x, y*
+	- Rotar Elementos `rotate(20deg)` *values: grados*
+	- Sesgar Elementos `skew(20deg, 0deg)` *values: grados-x, grados-y*
+[Ver transform.css](estilos/transform.css)
+
+## Transiciones `transition: all .4s ease` 
+Cambio de un estado a otro de algún elemento. Podemos hacer diseños hermosos que brinden una mejor experiencia de usuario haciendo uso de esta propiedad.
+
+Al usar esta propiedad en los elementos, le damos 3 valores para su función:
+```css 
+transition: all .4s ease;
+```
+Recibe 3 parámetros: all | background , duración, velocidad-transición
+
+- Velocidad de Curva (Velocidad de la transición)
+	- **ease** - inicio lento, despues rapido y termina lento
+	- **linear** - misma velocida de inicio a fin
+	- **ease-in** - inicio lento
+	- **ease-out** - final lento
+	- **ease-in-out** - inicio lento y final lento
+
+Ver ejemplo [transiciones.css](estilos/transiciones.css)
+
+## Animaciones con CSS `animation`
+Con las animaciones podemos darle movimiento y efectos a los elementos, además de darles estilos con css.
+
+Para crear una animación debemos usar una palabra reservada en css llamada **keyframes**, con ella declaramos y colocamos la funcionalidad de la animación, por ejemplo:
+
+```css
+@keyframes movimiento {
+	0% {transform: translate(0px);}
+	50% {transform: translate(500px);}
+	100% {transform: translate(0px);}
+}
+```
+
+Las funciones de las animaciones de definen en porcentaje (anterior) o usando las palabras reservadas **from** **to** como el siguiente ejemplo. En cada una se pueden colocar estilos, transiciones o transformaciones.
+```css 
+@keyframes colores {
+	from { background: #93b3c2;  }
+	to { background: #21295c; }
+}
+```
+
+Luego de crear la funcionalidad, debemos llamarla usando la propiedad `animation-name: value;` y definir una duración `animation-duration: 5s;`. También podemos colocar el tipo iteración, con `animation-iteration-count: all | initial | infinitive | inherit | unset`
+
+```css 
+.caja {
+	width: 200px;
+	height: 200px;
+	background: #93b3c2;
+	/*animation-name: movimiento;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;*/
+	animation: movimiento 5s ease infinite;
+}
+``` 
+
+Podemos colocar todas las configuraciones en una sola línea como aparece en el código anterior, usando la propiedad `animation` y colocando como parámetros `nombre duración velocidad iteración`.
+
+## Cómo utilizar fuentes personalizadas
+Muchas veces el sitio web está diseñado con una fuente distintas a las habituales, dependiendo del tema que trate o de lo que se quiera transmitir.
+
+Sin embargo, no todas la personas disponen de las fuentes en los ordenadores, así que es necesario poder enlazarlas de algún sitio para que pueda siministrarlas a la persona que este visitando nuestro sitio web.
+
+Una página que nos ayuda es eso es [Google fonts](https://fonts.google.com/).
+
+- Hay 2 formas de incluir las fuentes 
+	
+	- Manualmente: Para ellos debemos descargar las fuentes y usar el selector `@font-face` y colocar el nombre de la fuente y la ruta con la propiedad `src`
+	```css 
+	@font-face {
+		font-family: "Roboto-Regular";
+		src: url('estilos/fonts/Roboto-Regular.ttf');
+	}
+	```
+
+	- Automáticamente: Usando google font, que nos provee un CDN para cargar las fuentes. Sólo basta con seleccionar la fuente y copiar el código que nos genera la página: 
+
+		- Cargar de forma estándar 
+		```html 
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+		``` 
+
+		- Cargar con CSS `@import` 
+		```css 
+		@import url('https://fonts.googleapis.com/css?family=Lato');
+		```
+
+Luego sólo es cuestion de incluir la fuente en los elementos usando la propiedad **font-family**, así: `font-family: 'Lato', sans-serif;`
