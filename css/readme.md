@@ -416,3 +416,17 @@ Una página que nos ayuda es eso es [Google fonts](https://fonts.google.com/).
 		```
 
 Luego sólo es cuestion de incluir la fuente en los elementos usando la propiedad **font-family**, así: `font-family: 'Lato', sans-serif;`
+
+## Diseñando plantilla con float
+En el ejemplo [plantillaSentilla.html](plantillaSentilla.html) hemos creado unos estilos [plantillaSencilla.css](estilos/plantillaSencilla.css) para diseñar una plantilla sencilla usando float. Algunos tips a tener en cuenta son: 
+
+* Colocar la propiedad `float: left;` a ambos elementos principales 
+
+* Al elemento que sigue abajo, dar la propiedad `clear: both;` para limpiar el contenido y que los elementos anteriores se ubiquen correctamente
+
+* Importante usar la propiedad **box-sizing** para que los márgenes interiores se incluyan en el tamaño del objeto.
+```css 
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+```
