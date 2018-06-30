@@ -13,7 +13,8 @@ body {
 }
 
 .contenedor {
-	width: 1000px;
+	width: 90%;
+	max-width: 1000px;
 	margin: 20px auto;
 	overflow: hidden;
 }
@@ -50,7 +51,7 @@ header nav ul li a:hover {
 
 /*Contenedor*/
 .main {
-	width: 700px;
+	width: 70%;
 	background: white;
 	float: left;
 }
@@ -79,7 +80,7 @@ header nav ul li a:hover {
 }
 
 aside {
-	width: 300px;
+	width: 30%;
 	background: #162f26;
 	padding: 20px;
 	color: white;
@@ -121,9 +122,29 @@ aside .widget p {
 footer {
 	/*clear: both;*/
 	overflow: hidden;
-	width: 700px;
+	width: 70%;
 	background: black;
 	color: white;
 	padding: 15px 0;
 	text-align: center;
+}
+
+/* Media queries */
+/*
+* Cuando estes es una pantalla con un tamaño máximo de 800px, 
+* aplicale estos estilos
+*/
+@media screen and (max-width: 800px) {
+	.main {
+		width: 100%;
+	}
+
+	aside {
+		width: 100%;
+	}
+
+	footer {
+		width: 100%;
+	}
+
 }
