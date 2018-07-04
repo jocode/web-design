@@ -19,7 +19,7 @@ body {
 
 /*--------- Header -----------*/
 header {
-	background: url("../img/bg.jpg") #49a3d6;
+	background: url("../img/bg.png") #000;
 	background-repeat: none;
 	background-position: center;
 	max-height: 600px;
@@ -111,7 +111,7 @@ main .acerca-de .texto .titulo {
 	line-height: 34px;
 	margin-bottom: 40px;
 	font-weight: 300px;
-	color: #dd820d;
+	color: #2D2E2E;
 	text-align: center;
 }
 
@@ -135,7 +135,7 @@ main .trabajos .titulo {
 	line-height: 34px;
 	margin-bottom: 40px;
 	font-weight: 300px;
-	color: #323068;
+	color: #2D2E2E;
 	text-align: center;
 }
 
@@ -168,7 +168,7 @@ main .trabajos .contenedor-trabajos .trabajo .descripcion {
 
 main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
 	font-weight: 700px;
-	color: #3895ea;
+	color: #FA3232;
 	margin-bottom: 10px;
 }
 
@@ -187,7 +187,7 @@ footer .contacto .titulo {
 	line-height: 34px;
 	margin-bottom: 40px;
 	font-weight: 300px;
-	color: #3895ea;
+	color: #2D2E2E;
 	text-align: center;
 }
 
