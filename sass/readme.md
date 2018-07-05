@@ -89,7 +89,7 @@ Tambien podemos vigilar los archivos de una carpeta usando **:**. Pero recuerda 
 
 > Cada vez que vayas a trabajar con los estilos, debes ejecutar el comando nuevamente. O puedes utilizar el programa "Koala" para que no tengas repetir el proceso
 
-## Variables
+## Variables (`$miVariable: value`)
 Podemos guardar valores de forma temporal.
 Las variables se agregan usando el signo de dolar **$**
 `$colorPrimario: #000`
@@ -125,12 +125,14 @@ En las preferencias de Emmet, agregar estas líneas de código para el autocompl
 }
 ```
 
-## Archivos Parciales
+## Archivos Parciales (`@import file`)
 Nos permiten dividir nuestro código CSS en varios archivos para poder tenerlos más ordenados y ser más fácil el mantenimiento.
 Para crear un archivo parcial, debemos colocarle el nombre seguido de un guión bajo, así:
+
 `_archivoparcial.sass`
 
 Luego se crear y colocar el archivo parcial, lo llamamos en el archivo principal, donde tendremos los estilos a compilar usando la palabra reservada **@import**
+
 `@import archivoparcial`
 
 Nótese que no hemos colocado el guión bajo, ni la extensión.
@@ -154,18 +156,18 @@ Para ejecutar el mixin, usamos `@include`
 
 Sass cuenta con funciones prediseñadas que nos puedes ser muy útiles a la hora de escribir código. Las funciones que dispone las puedes encontrar en [este sitio](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 
-## Clases extendidas
+## Clases extendidas `@extend`
 Con Sass podemos crear una clase y incluir todas esas propiedades en otro selector usando la palabra `@extend`
 ```sass
-	.boton
-		display: inline-block
-		padding: 15px 20px
-		background: none
-		color: #fff
-		text-decoration: none
-		margin-right: 20px
+.boton
+	display: inline-block
+	padding: 15px 20px
+	background: none
+	color: #fff
+	text-decoration: none
+	margin-right: 20px
 
-	.btn-rojo
-		@extend .boton
-		background: #ff2732
+.btn-rojo
+	@extend .boton
+	background: #ff2732
 ```
