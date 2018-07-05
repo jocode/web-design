@@ -1,0 +1,17 @@
+/*
+* Esta sintaxis en la más nueva, pero  usamos {} y ;
+*/
+
+body {
+	background: #f2f2f2;
+}
+
+.articulo {
+	background: #fff;
+	.titulo {
+		color: black;
+	}
+	.autor {
+		color: black;
+	}
+}
