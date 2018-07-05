@@ -54,7 +54,7 @@ $margin: 16px;
 
 - **Sintaxis SCSS:** `.scss` Es una sintaxis bastante similar a la sintaxis del propio CSS. De hecho, el código CSS es código SCSS válido. Podríamos decir que SCSS es código CSS con algunas cosas extra.
 
-```scss
+```sass
 $primary-color: #3bbfce
 $margin: 16px
 
@@ -94,4 +94,78 @@ Podemos guardar valores de forma temporal.
 Las variables se agregan usando el signo de dolar **$**
 `$colorPrimario: #000`
 
-> En Atom para mostrar una línea en más renglones debemos ir a View > Toggle Soft Wrap y listo, no tenemos el larguero horizontal 
+> En Atom para mostrar una línea en más renglones debemos ir a View > Toggle Soft Wrap y listo, no tenemos el larguero horizontal
+
+## Anidación de selectores
+En Sass, no tenemos que repetir cada clase a la cual queremos acceder, sólo basta con crear una anidacion de selectores que se van separando por tabulación. Por ejemplo
+```sass
+	.articulo
+	    background-color: #e9f1f7
+	    width: 500px
+	    padding: 20px
+	    p
+	      a
+	        color: $primario
+	    .titulo
+	      color: $primario
+	    .autor
+	      color: #4d5061
+```
+
+**Importante**
+Evitar los espacios cuando hay anidaciones. Los espacios deben ir cuando queremos acceder a una clase o selector diferente.
+Los comentarios en Sass se escriben con (`//` ó `/* comentario */`), éstos no aparecerán en la hoja de estilos que se genere
+
+> **Sublime Text** Para que se autocomplete las propiedades al estar escribiendo en Sass, debemos instalar el paquete `CSS Extended Completions` aparte de tener instalado el de sass.
+
+En las preferencias de Emmet, agregar estas líneas de código para el autocompletado de las propiedades de CSS en Sass
+```json
+{
+	"css_completions_scope": "source.scss - comment - variable - keyword.control - entity.other, source.sass - comment - variable - keyword.control - entity.other",
+}
+```
+
+## Archivos Parciales
+Nos permiten dividir nuestro código CSS en varios archivos para poder tenerlos más ordenados y ser más fácil el mantenimiento.
+Para crear un archivo parcial, debemos colocarle el nombre seguido de un guión bajo, así:
+`_archivoparcial.sass`
+
+Luego se crear y colocar el archivo parcial, lo llamamos en el archivo principal, donde tendremos los estilos a compilar usando la palabra reservada **@import**
+`@import archivoparcial`
+
+Nótese que no hemos colocado el guión bajo, ni la extensión.
+Esta caracteristica es muy importante a la hora de tener muchas líneas de código, por ejemplo, podemos crear un archivo aparte para los mediaqueries
+
+## Mixins y Funciones `@mixin`
+El mixin en como una función, recibe los valores para luego procesarlos.
+
+Para declarar un mixins, usamos `@mixin`
+```sass
+@mixin nombre($param1, $param2)
+	body
+		background-color: $param1
+		// Other properties
+```
+
+Para ejecutar el mixin, usamos `@include`
+```sass
+@include colores(#ff800, #fff)
+```
+
+Sass cuenta con funciones prediseñadas que nos puedes ser muy útiles a la hora de escribir código. Las funciones que dispone las puedes encontrar en [este sitio](http://sass-lang.com/documentation/Sass/Script/Functions.html)
+
+## Clases extendidas
+Con Sass podemos crear una clase y incluir todas esas propiedades en otro selector usando la palabra `@extend`
+```sass
+	.boton
+		display: inline-block
+		padding: 15px 20px
+		background: none
+		color: #fff
+		text-decoration: none
+		margin-right: 20px
+
+	.btn-rojo
+		@extend .boton
+		background: #ff2732
+```
