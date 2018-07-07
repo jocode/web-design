@@ -15,7 +15,55 @@ Las variables pueden tener distintos tipos de datos:
 Tipo de dato | Explicación | Ejemplo
 -------------|-------------|--------
 **String** | Una cadena de texto. Para indicar que la variable es una cadena, debes  escribirlo entre comillas. | `var miVariable = 'Bob';`
-Number | Un número. Los números no tienen comillas. | `var miVariable = 10;`
+**Number** | Un número. Los números no tienen comillas. | `var miVariable = 10;`
 **Boolean** | Tienen valor verdadero/falso. true/false son palabras especiales en JS, y no necesitan comillas. | `var miVariable = true;`
 **Array** | Una estructura que te permite almacenar varios valores en una sola referencia. | `var miVariable = [1,'Bob','Steve',10];    Llama a cada miembro del array así:   miVariable[0], miVariable[1], etc.`
 **Object** | Básicamente cualquier cosa. Todo en JavaScript es un objeto y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes. | `var miVariable = document.querySelector('h1');    Todos los ejemplos anteriores también.`
+
+## Operadores
+Un operador es básicamente un símbolo matemático que puede actuar sobre dos valores (o variables) y producir un resultado.
+Los tipos de operadores son:
+- Asignación `=`
+  Nos permiten dar un valor a una variable. Cuando en una variable se le coloca este signo, le estamos asignando un valor, si no le agregamos el =, sólo la estamos declarando.
+- Matemáticos o aritméticos
+  - Suma `+`
+  - Resta `-`
+  - Multiplicación `*`
+  - División `/`
+  - Módulo `%` (Residuo de la división)
+- Incremento y decremento
+  - Incremento `++`
+  - Decremento `--`
+- Operadores lógicos o de comprobación
+  - Negación `!`
+  - AND `&&`
+  - OR `||`
+  - Igualdad `==`
+  - Identidad `===` (Iguales en valor y tipo de dato)
+  - Distinto `!=`
+  - No idénticos `!==`
+  - Mayor que `>`
+  - Menos que `<`
+  - Mayor o igual que `>=`
+  - Menor o igual que `<=`
+
+
+## Arreglos
+Es una variable que puede guardar múltiples valores
+
+Para declarar y asignar valores en un arreglo debemos hacer los siguiente:
+```js 
+var colores = ['Amarillo', 'Azul', 'Rojo', 'Verde', 'Naranja', 'Violeta'];
+```
+
+Para acceder a los elementos del arreglo, debemos iniciar con 0, de esta manera estaremos accediendo al primer elemento de que tenemos en el arreglo:
+```js 
+document.write(colores[1]); // Imprimirá 'Azul'
+```
+
+También podemos declarar y agregar elementos al arreglo accediendo con la posición
+```js 
+var amigos = [];
+amigos[0] = 'Juan';
+amigos[1] = 'Maria';
+```
