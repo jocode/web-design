@@ -67,3 +67,203 @@ var amigos = [];
 amigos[0] = 'Juan';
 amigos[1] = 'Maria';
 ```
+
+## Métodos y propiedades para arreglos
+
+```js 
+var colores = ['Amarillo', 'Azul', 'Rojo', 'Verde', 'Naranja', 'Violeta'];
+```
+
+- **Método length** Nos permite saber cuántos elementos tiene un arreglo.
+  `colores.length`
+
+- **Método Join** Convierte nuestro arreglo en una cadena de texto, separando cada elementos por un delimitador escojamos.
+  `colores.join(' - ')`
+
+- **Método pop y push**
+  - **pop** Elimina el último elemento de un arreglo y lo devuelve.
+  `colores.pop()`
+  - **push** Agrega uno o varios elementos al final de arreglo. 
+  `colores.push(item1, item2, etc)`;
+
+- **shift y unshift**
+  - **shift** Elimina el primer elemento de un arreglo y lo devuelve.
+    `colores.shift();`
+  - **unshift** Inserta uno o varios elementos al comienzo del arreglo
+    `colores.unshift(item1, item2, etc);`
+
+
+- **concat**
+Concatena uno o más items o arreglos en el arreglo actual.
+  `todosColores = colores.concat(neutros);`
+
+- **Método sort y reverse**
+  - **sort**
+  Ordena los arreglos alfabéticamente. 
+  Nota: sort no funciona para ordenar números, sólo cadenas de texto. Para ordenar números debemos pasar una función cómo parámetro.
+  `colores.sort();`
+  - **reverse**
+  Revierte el orden de los elementos en el array y lo devuelve;
+
+## Condicionales
+Las Condicionales son estructuras de código que permiten comprobar si una expresión devuelve true o no, y después ejecuta un código diferente dependiendo del resultado. La forma de condicional más común es la llamada  `if ... else`. Entonces, por ejemplo:
+
+```js 
+var edad = 18;
+if (edad >= 18){
+  document.write('Eres mayor de edad');
+} else {
+   document.write('Eres menor de edad');
+}
+```
+
+## Ciclos
+Nos permiten repetir bloques de código dada una condición.
+
+### Ciclo For
+El ciclo *for* ejecuta la primera expresión al iniciar el ciclo. Luego al inicio de cada iteración (Repetición) evalúa la segunda expresion y al final de cada iteración ejecuta la tercera expresion.
+
+
+La estructura se conforma de la siguiente manera:
+```js 
+for (inicio; condicion; actualización){
+  /*
+  * Bloque de código a repetirse
+  */
+}
+```
+
+El siguiete ejemplo, imprime los valores del 1 al 10
+```js 
+for (var i = 1; i <= 10; i++) {
+  document.writeln(i);
+}
+```
+
+Ciclo que imprime valores del 10 al 1
+```js 
+for (var i = 10; i > 0; i--){
+  document.writeln(i);
+}
+```
+
+Iteración de los item de un arreglo 
+```js 
+var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Agosto', 'Octuble', 'Noviembre', 'Diciembre'];
+
+for (var item = 0; item < meses.length; item++){
+  document.writeln(meses[item]);
+}
+```
+
+Otra forma de iteración del ciclo for. A este tipo de ciclo de le llama **for in** y se usa para recorrer arreglos
+```js 
+for (mes in meses){
+  console.log(meses[mes]);
+}
+```
+La variable `mes` toma las posición en cada iteración del arreglo `meses`. 
+
+
+### Ciclo While
+Ejecuta las sentencia siempre que la condición sea verdadera. La expresión se verfica en cada inicio de la iteración.
+
+**Iteración**: Es la repetición de cada sentencia.
+
+La estructura del ciclo while se compone de la siguiente forma:
+```js 
+while (condicion){
+  /*
+  * Código
+  */
+}
+```
+
+Ejemplo de ciclo while. Imprime los números del 1 al 10
+```js 
+var numero = 1;
+while (numero <= 10){
+  document.writeln(numero);
+  numero++;
+}
+```
+
+> **Nota** Siempre que usemos el ciclo while, debemos incrementar la variable para que no se convierta en un ciclo infinito.
+
+
+### Ciclo Do While
+El bucle do-while es una variante del ciclo *while*. Este ciclo evalúa la expresión al final de cada iteración. Por lo que se garantiza que el ciclo se ejecute al menos una vez.
+
+Ejemplo de ciclo *do-while*, imprime '11', primero ejecuta las sentencias y luego evalúa la condición. 
+```js 
+var numeo = 11;
+do {
+ document.writeln(numero);
+ numero++;  
+} while (numero <= 10);
+```
+Como vemos en este ciclo, imprime '11', a pesar de ser falsa la condición, esto es porque primero ejecuta el código y luego evalúa la condición.
+
+## Sentencias `break` y `continue`
+Estas sentencias nos permiten alterar el comportamiento de nuestros ciclos. Con estas sentencias podemos decirle al ciclo que pare completamente o que pase a la siguiente iteración dada una acción. 
+
+- **break** Corta la ejecución de un ciclo, es decir ya no se ejecutan más las sentencias.
+- **continue** Salta a la siguiente iteración o ejecución del ciclo, ignorando el código que le sigue.
+
+
+En este ejemplo, muestra todos los colores, menos el 'Azul'. Si usamos `break`, sólo mostrará el color 'Amarillo'
+```js 
+var colores = ['Amarillo', 'Azul', 'Rojo', 'Verde', 'Naranja', 'Violeta'];
+
+for (color in colores){
+  if (colores[color]=='Azul'){
+    continue; // break;
+  }
+  document.writeln(colores[color] + ' <br>');
+}
+```
+
+## Funciones
+Las funciones son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices.
+
+Si ves algo que parece un nombre de variable, pero tiene paréntesis — `()` — al final, probablemente es una función. Las funciones con frecuencia toman argumentos — pedazos de datos que necesitan para hacer su trabajo. Estos se colocan dentro de los paréntesis, y se separan con comas si hay más de uno.
+
+La estructura para la declaración de una función es:
+```js 
+function nombre(arg1, arg2, etc){
+  /*
+  * Código
+  */
+}
+```
+- La sentencia **return** devuelve los valores de las operaciones hechas en las funciones
+
+Ejemplo, suma de dos números:
+```js 
+function suma(a, b){
+  return a+b;
+}
+```
+
+Otra forma de declarar funciones es creando una función anónima (Aquella función que no tiene nombre) y guardarla dentro de una variable.
+```js 
+var suma = function(a, b){
+  return a + b;
+}
+```
+
+Las funciones se utilizan llamando el nombre de la función con paréntesis, y colocando parámetros si los solicita. 
+```js 
+suma(12, 89);
+```
+
+### Funciones autoinvocadas
+Se ejecutan de forma automática, sin necesidad de llamarla. 
+Para declarar una función automática hacemos lo siguiente:
+```js 
+/*Función autoinvocada*/
+(function(){
+  alert('Hola mundo')
+}());
+```
+Esto no permite proteger nuestro código de código de terceros (scope), en el caso que utilicemos otro código y tenga los mismo nombres de variables o funciones, no vayan a entrar en confusión.

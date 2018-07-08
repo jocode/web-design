@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones</title>
+</head>
+<body>
+	<h1>Funciones</h1>
+	<script type="text/javascript">
+		
+		var a = 10;
+		var b = 5;
+		var c = a + b;
+
+		/*function suma(a, b){
+			return a+b;
+		}*/
+
+		var suma = function(a, b){
+			return a + b;
+		}
+
+		/*Funciones autoinvocadas*/
+		(function(){
+			alert('Hola mundo')
+		}());
+
+		document.writeln(suma(10, 11));
+	</script>
+</body>
+</html>

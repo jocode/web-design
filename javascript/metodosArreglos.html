@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Métodos y propiedades para arreglos</title>
+</head>
+<body>
+	<h1>Métodos y propiedades para arreglos</h1>
+	<script type="text/javascript">
+		/*--- Método length ---*/
+		var colores = ['Amarillo', 'Azul', 'Rojo', 'Verde', 'Naranja', 'Violeta'];
+		// document.write(colores.length);
+
+		/*--- Método Join --- */
+		document.write(colores.join(' - '))
+
+		/*--- Método Pop y Push --- */ 
+		colores.pop()
+		colores.push('Violeta');
+
+		/*--- Método Shift y unshift --- */
+		colores.shift();
+		colores.unshift('Amarillo');
+
+		/*--- Método concat --- */
+		var neutros = ['Blanco', 'Negro'];
+		todosColores = colores.concat(neutros);
+		console.log(todosColores);
+
+		/*--- Método sort y reverse --- */	
+		colores.sort();
+		colores.reverse();
+		console.log(colores)
+
+
+	</script>
+</body>
+</html>
