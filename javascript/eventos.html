@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos</title>
+	<style type="text/css">
+		.caja {
+			width: 200px;
+			height: 200px;
+			cursor: pointer;
+			background-color: #226fc1; 
+			margin: 10px;
+			display: inline-block;
+			text-align: center;
+			font-size: 30px;
+			color: #fff;
+			font-family: Arial, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<h1>Eventos</h1>
+	<!-- <button onclick="saludo()">Saludo</button> -->
+	<button id="btn-caja">Crear caja</button>
+	<section class="contenedor" id="contenedor"></section>
+	<script type="text/javascript">
+		/* Exixten 3 modelos de eventos diferentes: */
+		
+		/*- Modelo basico de eventos.
+			Caracteristicas limitadas.
+			Pero Funciona en todos los navegadores.*/
+		/*function saludo(){
+			alert('Hola, buenas, buenas...');
+		}
+
+		function saludo2(){
+			alert('Hola 2, buenas, buenas...');
+		}
+
+		// - Modelo de eventos estandar.
+		// 	Podemos hacer mas cosas con el.
+		// 	Todos los navegadores lo soportan.
+		var btnSaludar = document.getElementById('btn-saludar');
+		btnSaludar.addEventListener('click', saludo);
+		btnSaludar.addEventListener('click', saludo2);
+
+		btnSaludar.removeEventListener('click', saludo2);*/
+
+
+		function crearCaja(){
+			var contenedor = document.getElementById('contenedor');
+			var caja = document.createElement('div');
+			caja.className = 'caja';
+			contenedor.appendChild(caja);
+		}
+
+		var btnCaja = document.getElementById('btn-caja');
+		btnCaja.addEventListener('click', crearCaja);
+
+	</script>
+</body>
+</html>

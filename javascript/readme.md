@@ -318,3 +318,54 @@ Sim embargo, siempre debes colocar la palabra `var`, porque de lo contrario el v
 - **indexOf(searchString, position)** Muestra la posición de una cadena de texto o letra. (Metodo sencible a mayusculas, 'c' es diferente a 'C')
 
 - **lastIndexOf(searchString, position)** Encuentra la posición de la primera letra o cadena de texto iniciando de atrás hacia adelante. (Metodo sencible a mayusculas, 'c' es diferente a 'C')
+
+## Eventos
+Son unas estructuras de código que captan lo que sucede en el navegador, y permite que en respuesta a las acciones que suceden se ejecute un código. El ejemplo más obvio es un click (click event), que se activa al hacer click sobre algo.
+
+*Si quieres saber más sobre los eventos, visitar el sitio web de Mozilla Developers Network* [Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events#Standard_events) 
+
+Exixten 3 modelos de eventos diferentes:
+- Modelo basico de eventos.
+  Caracteristicas limitadas.
+  Pero Funciona en todos los navegadores.
+
+- Modelo de eventos estandar.
+  Podemos hacer mas cosas con el.
+  Todos los navegadores lo soportan.
+
+  Las versiones anteriores de Internet explorer como IE7 no lo soportan.
+
+- Modelo de eventos de Internet Explorer.
+  Modelo creado por Microsoft exclusivamente para IE.
+
+El primer caso, es cuando le colocamos el atributo dentro del nodo de HTML, el segundo caso, es creando el evento por código, usando la función **addEventListener** 
+```js 
+function saludo(){
+    alert('Hola, buenas, buenas...');
+}
+
+// Obtenemos el nodo y le asociamos un evento
+var btnSaludar = document.getElementById('btn-saludar');
+btnSaludar.addEventListener('click', saludo);
+
+// Eliminamos el evento del nodo
+btnSaludar.removeEventListener('click', saludo2);
+```
+
+También podemos ejecutar las funciones anónimas, en la creación de eventos
+```js 
+nodo.addEventListener('click', function(){
+  // Código
+});
+```
+
+Algunos de los eventos mas usados son:      
+- click
+- focus
+- blur
+- change
+- onload
+- mouseover
+- mouseout
+- resize 
+- submit
