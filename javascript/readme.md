@@ -267,3 +267,54 @@ Para declarar una función automática hacemos lo siguiente:
 }());
 ```
 Esto no permite proteger nuestro código de código de terceros (scope), en el caso que utilicemos otro código y tenga los mismo nombres de variables o funciones, no vayan a entrar en confusión.
+
+## scope (Ámbito de las variables)
+Es el alcance que pueden tener nuestras variables y qué partes de nuestro código pueden acceder a ellas y que otras no pueden.
+El Scope funciona por niveles.
+
+Las variables pueden ser de 2 tipos:
+- **global** Las variables globales pueden ser accedidas desde cualquier parte del codigo, incluyendo cualquier funcion.
+- **local** Las variables locales son las que han sido creadas dentro de una funcion o una funcion anidada (una funcion dentro de otra).
+
+El scope funciona por niveles, si no encuentra una variable en el mismo nivel subirá de nivel hacia afuera y buscará. 
+Si no encuentra subira otro nivel y asi sucesivamente.
+
+Si tenemos una funcion anidada (una funcion dentro de otra)
+podemos buscar variables desde dentro hacia afuera, pero desde 
+una funcion no podemos buscar variables hacia dentro de otra funcion.
+
+> **IMPORTANTE**  
+> Si la variable no está precedida de la palabra (var), la variable se define como global
+
+### Proteger nuestras variables de codigo de terceros
+Hay un tipo de función especial, denominada función autoinvocada y permiten convertir nuestras variables, en variables locales, es decir que no pueden ser accesadas desde otro script.
+
+Las funciones autoinvocadas se ejecutan automáticamente, y se definen de la siguiente manera:
+```js 
+(function(){
+  var mensaje = 'Este es mi mensaje';
+}());
+// Producirá error al acceder a la variable, porque no la encuentra
+console.log(mensaje);
+```
+
+Esta debería ser la forma de que escribieras código, para que no vaya a entrar en conflicto con el código de terceros. Ni siquiera la consola del navegador puede acceder a la variable. 
+Sim embargo, siempre debes colocar la palabra `var`, porque de lo contrario el valor de la variable puede ser mostrado.
+
+## Métodos y propiedades para cadenas de texto
+
+- **length** `variable.length` Muestra cuántos caracteres contiene la variable. (Los espacios se inluyen como caracteres). 
+
+- **substring(start, end)** Devuelve una subsección específica de la cadena de texto
+
+- **substr(start, length)** Devuelve una subsección especifica, indicandole el caracter de inicio y el largo de caracteres a tomar
+
+- **replace(searchExp, replaceExp)** Busca y reemplaza valores en una cadena de texto. (Metodo sencible a mayusculas, 'c' es diferente a 'C')
+
+- **toUpperCase()** `nombre.toUpperCase()` Convierte todas las letras a mayúsculas. 
+
+- **toLowerCase()** Convierte todas la letras en minúsculas.
+
+- **indexOf(searchString, position)** Muestra la posición de una cadena de texto o letra. (Metodo sencible a mayusculas, 'c' es diferente a 'C')
+
+- **lastIndexOf(searchString, position)** Encuentra la posición de la primera letra o cadena de texto iniciando de atrás hacia adelante. (Metodo sencible a mayusculas, 'c' es diferente a 'C')

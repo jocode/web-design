@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Scope de javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*Nuestras variables pueden ser de dos tipos: Global y local*/
+
+
+		/*----- Variables locales -----*/
+		/*Las variables locales son las que han sido creadas dentro de una funcion o una funcion anidada (una funcion dentro de otra).*/
+		/*function saludo(){
+			var texto = 'Hola mundo';
+			console.log(texto);
+		}*/
+
+		/*Variable local con funciones anidadas*/
+
+	/*El scope funciona por niveles, si no encuentra una variable en el mismo nivel subirá de nivel hacia afuera y buscará. 
+	Si no encuentra subira otro nivel y asi sucesivamente.
+
+	Si tenemos una funcion anidada (una funcion dentro de otra)
+	podemos buscar variables desde dentro hacia afuera, pero desde 
+	una funcion no podemos buscar variables hacia dentro de otra funcion.*/
+
+	/*function saludo(){
+		var texto = 'Hola mundo';
+		function mensaje(){
+			console.log(texto);
+		}
+		mensaje();
+	}
+	saludo();*/
+
+
+	/*----- Variables Globales -----*/
+	/*Las variables globales pueden ser accedidas desde cualquier parte del codigo, incluyendo cualquier funcion.*/
+	/*var texto = 'Hola mundo';
+	function saludo(){
+		console.log(texto);
+		texto = 'Hola mundo modificado';
+		console.log(texto);
+	}
+	saludo();*/
+
+
+	/*------------- IMPORTANTE -------------*/
+	/*Si la variable no está precedida de la palabra (var), la variable se define como global*/
+	/*function saludo(){
+		mensaje = 'Hola mundo';
+	}
+	saludo();
+	console.log(mensaje);*/
+
+
+	/*-----Proteger nuestras variables de codigo de terceros.-----*/
+	/* Hay un tipo de función especial, denominada función autoinvocada y permiten convertir nuestras variables, en variables locales, es decir que no pueden ser accesadas desde otro script.*/
+
+	/*Las funciones autoinvocadas se ejecutan automáticamente*/
+	(function(){
+		var mensaje = 'Este es mi mensaje';
+		/**
+		* Código tuyo. Para que no vaya a entrar en conflicto con el código de terceros.
+		Ni siquiera la consola puede acceder a la variable */
+	}());
+	console.log(mensaje);
+	</script>
+</body>
+</html>
