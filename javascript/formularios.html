@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formularios</title>
+</head>
+<body>
+	<form action="" name="formulario" id="formulario">
+		<input type="text" name="nombre" placeholder="Nombre">
+		
+		<input type="radio" name="sexo" id="hombre" value="hombre">
+		<label for="hombre">Hombre</label>
+
+		<input type="radio" name="sexo" id="mujer" value="mujer">
+		<label for="mujer">Mujer</label>
+
+		<input type="checkbox" name="terminos" id="terminos">
+		<label for="terminos">Términos</label>
+
+		<input type="submit" value="Enviar">
+	</form>
+
+	<script type="text/javascript">
+		/*var formulario = document.getElementsByName('formulario');*/
+		var formulario = document.getElementById('formulario');
+
+		// Podemos acceder a un elemento del formulario por el name
+		var nombre = formulario.nombre;
+		var sexo = formulario.sexo;
+		var terminos = formulario.terminos;
+
+		formulario.addEventListener('submit', validar);
+		function validar(e){
+
+			/*Validación de Nombre*/
+			if (nombre.value.length > 15){
+				alert('Máximo de caracteres permitidos');	
+			} else if (nombre.value == ''){
+				alert('Por favor ingresa un nombre');
+			}
+
+
+			/*Validación de radio Buttom*/
+			if (sexo[0].checked == false && sexo[1].checked == false){
+				alert('Por favor selecciona un tipo de sexo');
+			}
+
+
+			/*Validación de términos y condiciones*/
+			if (! terminos.checked){
+				alert('Acepta los términos y condiciones');
+			}
+
+
+			/*Previene el comportamiento del formulario, evita que se envíe. */
+			e.preventDefault();
+		}
+	</script>
+</body>
+</html>

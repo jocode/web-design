@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Palabra reservada this</title>
+	<style type="text/css">
+	.caja {
+		width: 200px;
+		height: 200px;
+		cursor: pointer;
+		margin: 10px;
+		background-color: #226fc1;
+		display: inline-block;
+		text-align: center;
+		font-size: 20px;
+		color: #fff;
+		font-family: Arial;
+	}
+	.negro {
+		background-color: #000;
+	}
+</style>
+</head>
+<body>
+	<h1>Palabra reservada this</h1>
+	<div class="caja">1</div>
+	<div class="caja">2</div>
+	<div class="caja">3</div>
+	<div class="caja">4</div>
+
+	<script type="text/javascript">
+		var cajas = document.getElementsByClassName('caja');
+
+		/*cajas[0].addEventListener('click', color);
+
+		function color(){
+			// Togggle: Alternar la clase en el elemento. Si tiene la clase negro la va a quitar, sino lo va a colocar.
+			cajas[0].classList.toggle('negro');
+		}*/
+
+		for (i = 0; i < cajas.length; i++){
+			cajas[i].addEventListener('click', color);
+		}
+
+		function color(){
+			this.classList.toggle('negro');
+		}
+
+	</script>
+</body>
+</html>

@@ -369,3 +369,57 @@ Algunos de los eventos mas usados son:
 - mouseout
 - resize 
 - submit
+
+## Palabra reservada `this`
+Las palabras reservadas no pueden ser utilizadas como variables, funciones, métodos o identificadores de objetos. Porque son propias del lenguaje de programación y tienen sus funciones dentro de él. 
+
+La palabra reservada `this` tiene muchas connotaciones en javascript, dependiendo del contexto en el que se use. 
+
+- **Contexto Global**
+En el contexto de ejecución **global** (fuera de cualquier función), `this` se refiere al objeto global, ya sea en modo estricto o no.
+Por ejemplo: 
+```js 
+console.log(this.document === document); // true
+
+// En los navegadores web, el objeto window también es un objeto global:
+console.log(this === window); // true
+```
+
+- **Como contexto de una función**
+- **Como controlador de eventos del DOM** 
+De esta forma javascript sabrá qué elemento ha sido clickeado, arrastrado, etc. Como el siguiente ejemplo:
+```js 
+for (i = 0; i < cajas.length; i++){
+  cajas[i].addEventListener('click', color);
+}
+
+function color(){
+  this.classList.toggle('negro');
+}
+```
+Al momento de dar click en un elemento, el sabe automáticamente cuál elemento ha sido seleccionado, sin necesidad de colocar la posición en el arreglo.
+
+*Para más información sobre palabras reservadas, visitar el sitio web:* 
+[Palabras reservadas](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Palabras_Reservadas)
+
+## Formularios
+Javascript es muy versátil y ha llegado para que podamos hacer funcionalidad elegantes. Uno de las cosas que nos sirve javascript es para validar formularios del lado del cliente. 
+
+Para acceder a los elementos del formulario, tenemos una opción mucho más elegante que usar `document.getElementById`. Sólo basta con obtener el id del formulario, y tan sólo con los nombres de los campos, podemos acceder a ellos. 
+```js 
+var formulario = document.getElementById('formulario');
+
+// Podemos acceder a un elemento del formulario por el atributo 'name'
+var nombre = formulario.nombre;
+var sexo = formulario.sexo;
+var terminos = formulario.terminos;
+```
+
+Para evitar el envío del formulario, hay una función **(`preventDefault()`)** que podemos usar, esta función se coloca en el evento 'submit', como vemos en el siguiente ejemplo: 
+```js 
+formulario.addEventListener('submit', validar);
+function validar(e){
+  /*Previene el comportamiento del formulario, evita que se envíe. */
+  e.preventDefault();
+}
+```
