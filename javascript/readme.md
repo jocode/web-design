@@ -447,3 +447,96 @@ document.getElementById('btn-detener').addEventListener('click', function(){
 
 - **`clearInterval(timeoutId)` - `clearTimeout(timeoutId)`** Estos métodos eliminan los tiempos de retraso que han sido establecido por las funciones `setInterval()` ó `setTimeout()`. Es necesario almacenar los tiempos de espera en una variable para tener una referencia a ellos y poder eliminarlas.
 
+## Fechas en Javascript
+JavaScript tiene la clase `Date()` que nos permite trabajar con fechas y horas. (Date - MDN)[https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date]
+
+Para usar el objeto, sólo debemos instanciar la clase. 
+```js 
+var fecha = new Date();
+
+// Algunos de los métodos del objeto Date son:
+console.log(fecha.getHours() + ' Horas');
+console.log(fecha.getMinutes() + ' Minutos');
+console.log(fecha.getSeconds() + ' Segundos');
+```
+
+JavaScript cuenta con una serie de métodos para obtener las horas, segundos, día de la semana, mes, año, etc. *Ver la referencia de los métodos de Date* [Javascript Date Reference](https://www.w3schools.com/jsref/jsref_obj_date.asp)
+
+Si queremos mostrar la hora, podemos usar la función **setInterval()** donde podemos ejecutar la función mostrar hora, caha 1 segundo. 
+
+
+```js 
+function mostrarTiempo(){
+  var fecha = new Date();
+  var parrafo = document.getElementById('parrafo');
+  parrafo.innerHTML = fecha;
+}
+
+setInterval(mostrarTiempo, 1000);
+```
+
+
+## Hoisting
+Hoisting se le llama a lo que hace Javascript por defecto, que es mover automaticamente todas las declaraciones al inicio del scrtip actual o funcion.
+
+Por defecto Javascript coloca o revisa primero las declación de variables.
+
+En este ejemplo, Javascript automaticamente va posicionar esta declaracion al inicio.
+```js 
+// Inicialización
+nombre = 'Johan Mosquera';
+// Declaración
+var nombre;
+document.writeln(nombre);
+```
+
+Sin embargo, por cuestión de orden y para evitar errores, es mejor colocar la declaración de varianles al principio del código.
+
+> **IMPORTANTE:** Javascript solo posicionara al inicio las "declaraciones", no las "inicializaciones".
+
+## Objetos en Javascript
+Son variables que pueden contener muchos valores. Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre y un valor. Un valor de propiedad puede ser una función, la cual es conocida entonces como un método del objeto.
+
+Con los objetos son muy versátiles, no solo nos permiten crear propiedades, sino que también permite crear métodos.
+
+```js 
+// Objeto en javascript
+var johan = {
+  nombre: 'Johan Mosquera',
+  edad: 0,
+  pais: 'Colombia',
+  bio: function(){
+    return this.nombre + ' tiene ' + this.edad + ' años.';
+  }
+}
+/* Accediendo a las propiedades del objeto */
+document.writeln(johan.bio());
+```
+
+**Importante** Para acceder a los objetos, si lleva paréntesis es un método, si no lleva, es una propiedad. Además para acceder a la propiedad, se debe usar la palabra reservada `this`. 
+
+### Constructor de Objetos 
+En JavaScript los métodos son objetos como lo es una función normal y se vinculan a un objeto como lo hace una propiedad, lo que significa que se pueden invocar desde "fuera de su contexto".
+
+Lo que consideramos como constructor de objetos, sería en otros lenguajes de programación conocidos como clases.
+
+Ejemplo de constructor de objetos (ejemplo de clase)
+```js 
+// Constructor de Objetos
+function persona(nombre, edad, pais){
+  this.nombre = nombre;
+  this.edad = edad;
+  this.pais = pais;
+}
+
+// Creando un objeto
+var brother = new persona('Juan', 0, 'Croacia');
+document.writeln(brother.nombre);
+```
+Los constructores de objetos son muy útiles ya que nos permite tener predefinido el esquema, ahorrandonos líneas de código. Además nos permite crear la cantidad de objetos que nosotros necesitemos.
+
+
+*Algunas guías de referencia:*
+- [Introducción a JavaScript orientado a objetos](https://developer.mozilla.org/es/docs/Web/JavaScript/Introducci%C3%B3n_a_JavaScript_orientado_a_objetos)
+- [Trabajando con objetos](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos)
+

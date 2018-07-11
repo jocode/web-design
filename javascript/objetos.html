@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos en Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*var nombre = 'Johan';
+		var arreglo = ['Johan', 'Mosquera', '00'];
+
+		// Objeto en javascript
+		var johan = {
+			nombre: 'Johan Mosquera',
+			edad: 0,
+			pais: 'Colombia',
+			bio: function(){
+				return this.nombre + ' tiene ' + this.edad + ' años.';
+			}
+		}
+
+		var esteban = {
+			nombre: 'Esteban Dionisio',
+			edad: 0,
+			pais: 'Croacia',
+			bio: function(){
+				return this.nombre + ' tiene ' + this.edad + ' años.';
+			}
+		}
+
+		/* Accediendo a las propiedades del objeto */
+		// document.writeln(johan.bio());
+		// document.writeln(esteban.nombre);*/
+
+		/* ------ Constructor de Objetos ---------  */
+		function persona(nombre, edad, pais){
+			this.nombre = nombre;
+			this.edad = edad;
+			this.pais = pais;
+		}
+
+		// Creando un objeto
+		var brother = new persona('Mandzukich', 0, 'Croacia');
+		document.writeln(brother.nombre);
+	</script>
+</body>
+</html>
