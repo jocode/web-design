@@ -423,3 +423,27 @@ function validar(e){
   e.preventDefault();
 }
 ```
+
+## Eventos de tiempo: `timming, timmers, timeout e interval`
+Nos permite ejecutar cierto código despues que haya pasado cierto tiempo o por intervalos.
+
+- **setTimeout(func, delay)** Ejecuta una función o un bloque de código después de cierto tiempo. 
+```js 
+function saludo(){
+  alert('Hola');
+}
+// Ejecuta la función saludo, trascurridos 3 segundos
+setTimeout(saludo, 3000);
+```
+
+- **setInterval(funcName, delay)** Define intervalos de tiempo para una función.
+```js 
+var intervalo = setInterval(saludo, 3000);
+
+document.getElementById('btn-detener').addEventListener('click', function(){
+  clearInterval(intervalo);
+});
+```
+
+- **`clearInterval(timeoutId)` - `clearTimeout(timeoutId)`** Estos métodos eliminan los tiempos de retraso que han sido establecido por las funciones `setInterval()` ó `setTimeout()`. Es necesario almacenar los tiempos de espera en una variable para tener una referencia a ellos y poder eliminarlas.
+

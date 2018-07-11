@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos de tiempo</title>
+</head>
+<body>
+	<button id="btn-iniciar">Iniciar</button>
+	<button id="btn-detener">detener</button>
+	<script type="text/javascript">
+		/* ---- setTimeout(func, delay) -----
+		Ejecuta una función o un bloque de código después de cierto tiempo*/
+		document.getElementById('btn-iniciar').addEventListener('click', function(){
+			setTimeout(saludo, 2000);
+		});
+
+		function saludo(){
+			alert('Hola');
+		}
+
+		var tiempo = setTimeout(saludo, 3000);
+		// De esta manera nunca se ejecutará la función
+		clearTimeout(tiempo);
+
+		/* ----- setInterval(funcName, delay); ---------
+		Define intervalos de tiempo para una función*/
+		var intervalo = setInterval(saludo, 3000);
+
+		document.getElementById('btn-detener').addEventListener('click', function(){
+			clearInterval(intervalo);
+		});
+
+	</script>
+</body>
+</html>
