@@ -540,3 +540,20 @@ Los constructores de objetos son muy útiles ya que nos permite tener predefinid
 - [Introducción a JavaScript orientado a objetos](https://developer.mozilla.org/es/docs/Web/JavaScript/Introducci%C3%B3n_a_JavaScript_orientado_a_objetos)
 - [Trabajando con objetos](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos)
 
+
+## Trabajando con Audio y video en JavaScript 
+Con Javascript podemos trabajar con los reproductores de audio y video. Con él podemos usar los controles como reproducir, pausar y aumentar o disminuir el volumen. Con eso nos podemos crear nuestro reproductor personalizado.
+
+Algunas Propiedades
+- **video.currentTime** - regresa el tiempo actual en el que va el video
+- **video.duration** - regresa la duracion del video
+- **video.ended** - regresa si el video ya termino
+
+Eventos
+- **pause**
+- **play**
+
+*Algunos recursos de interés tomados de Mozilla Developers Network*
+- [Media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events)
+- [Video and audio content](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+
