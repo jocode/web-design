@@ -1,10 +1,13 @@
 # Javascript
+
 JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu Sitio Web, (por ejemplo juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). [Fundamentos de JavaScript](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 
 ## Qué es JavaScript?
+
 JavaScript es un robusto lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla .
 
 ## Variables
+
 Las variables son contenedores en los que puedes almacenar valores. Primero debes declarar la variable con la palabra clave var, seguida del nombre que le quieras dar:
 ```js
 var nombreDeLaVariable;
@@ -21,6 +24,7 @@ Tipo de dato | Explicación | Ejemplo
 **Object** | Básicamente cualquier cosa. Todo en JavaScript es un objeto y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes. | `var miVariable = document.querySelector('h1');    Todos los ejemplos anteriores también.`
 
 ## Operadores
+
 Un operador es básicamente un símbolo matemático que puede actuar sobre dos valores (o variables) y producir un resultado.
 Los tipos de operadores son:
 - Asignación `=`
@@ -49,6 +53,7 @@ Los tipos de operadores son:
 
 
 ## Arreglos
+
 Es una variable que puede guardar múltiples valores
 
 Para declarar y asignar valores en un arreglo debemos hacer los siguiente:
@@ -106,6 +111,7 @@ Concatena uno o más items o arreglos en el arreglo actual.
   Revierte el orden de los elementos en el array y lo devuelve;
 
 ## Condicionales
+
 Las Condicionales son estructuras de código que permiten comprobar si una expresión devuelve true o no, y después ejecuta un código diferente dependiendo del resultado. La forma de condicional más común es la llamada  `if ... else`. Entonces, por ejemplo:
 
 ```js 
@@ -118,9 +124,11 @@ if (edad >= 18){
 ```
 
 ## Ciclos
+
 Nos permiten repetir bloques de código dada una condición.
 
 ### Ciclo For
+
 El ciclo *for* ejecuta la primera expresión al iniciar el ciclo. Luego al inicio de cada iteración (Repetición) evalúa la segunda expresion y al final de cada iteración ejecuta la tercera expresion.
 
 
@@ -166,6 +174,7 @@ La variable `mes` toma las posición en cada iteración del arreglo `meses`.
 
 
 ### Ciclo While
+
 Ejecuta las sentencia siempre que la condición sea verdadera. La expresión se verfica en cada inicio de la iteración.
 
 **Iteración**: Es la repetición de cada sentencia.
@@ -192,6 +201,7 @@ while (numero <= 10){
 
 
 ### Ciclo Do While
+
 El bucle do-while es una variante del ciclo *while*. Este ciclo evalúa la expresión al final de cada iteración. Por lo que se garantiza que el ciclo se ejecute al menos una vez.
 
 Ejemplo de ciclo *do-while*, imprime '11', primero ejecuta las sentencias y luego evalúa la condición. 
@@ -205,6 +215,7 @@ do {
 Como vemos en este ciclo, imprime '11', a pesar de ser falsa la condición, esto es porque primero ejecuta el código y luego evalúa la condición.
 
 ## Sentencias `break` y `continue`
+
 Estas sentencias nos permiten alterar el comportamiento de nuestros ciclos. Con estas sentencias podemos decirle al ciclo que pare completamente o que pase a la siguiente iteración dada una acción. 
 
 - **break** Corta la ejecución de un ciclo, es decir ya no se ejecutan más las sentencias.
@@ -224,6 +235,7 @@ for (color in colores){
 ```
 
 ## Funciones
+
 Las funciones son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices.
 
 Si ves algo que parece un nombre de variable, pero tiene paréntesis — `()` — al final, probablemente es una función. Las funciones con frecuencia toman argumentos — pedazos de datos que necesitan para hacer su trabajo. Estos se colocan dentro de los paréntesis, y se separan con comas si hay más de uno.
@@ -258,6 +270,7 @@ suma(12, 89);
 ```
 
 ### Funciones autoinvocadas
+
 Se ejecutan de forma automática, sin necesidad de llamarla. 
 Para declarar una función automática hacemos lo siguiente:
 ```js 
@@ -269,6 +282,7 @@ Para declarar una función automática hacemos lo siguiente:
 Esto no permite proteger nuestro código de código de terceros (scope), en el caso que utilicemos otro código y tenga los mismo nombres de variables o funciones, no vayan a entrar en confusión.
 
 ## scope (Ámbito de las variables)
+
 Es el alcance que pueden tener nuestras variables y qué partes de nuestro código pueden acceder a ellas y que otras no pueden.
 El Scope funciona por niveles.
 
@@ -287,6 +301,7 @@ una funcion no podemos buscar variables hacia dentro de otra funcion.
 > Si la variable no está precedida de la palabra (var), la variable se define como global
 
 ### Proteger nuestras variables de codigo de terceros
+
 Hay un tipo de función especial, denominada función autoinvocada y permiten convertir nuestras variables, en variables locales, es decir que no pueden ser accesadas desde otro script.
 
 Las funciones autoinvocadas se ejecutan automáticamente, y se definen de la siguiente manera:
@@ -320,6 +335,7 @@ Sim embargo, siempre debes colocar la palabra `var`, porque de lo contrario el v
 - **lastIndexOf(searchString, position)** Encuentra la posición de la primera letra o cadena de texto iniciando de atrás hacia adelante. (Metodo sencible a mayusculas, 'c' es diferente a 'C')
 
 ## Eventos
+
 Son unas estructuras de código que captan lo que sucede en el navegador, y permite que en respuesta a las acciones que suceden se ejecute un código. El ejemplo más obvio es un click (click event), que se activa al hacer click sobre algo.
 
 *Si quieres saber más sobre los eventos, visitar el sitio web de Mozilla Developers Network* [Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events#Standard_events) 
@@ -371,6 +387,7 @@ Algunos de los eventos mas usados son:
 - submit
 
 ## Palabra reservada `this`
+
 Las palabras reservadas no pueden ser utilizadas como variables, funciones, métodos o identificadores de objetos. Porque son propias del lenguaje de programación y tienen sus funciones dentro de él. 
 
 La palabra reservada `this` tiene muchas connotaciones en javascript, dependiendo del contexto en el que se use. 
@@ -403,6 +420,7 @@ Al momento de dar click en un elemento, el sabe automáticamente cuál elemento 
 [Palabras reservadas](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Palabras_Reservadas)
 
 ## Formularios
+
 Javascript es muy versátil y ha llegado para que podamos hacer funcionalidad elegantes. Uno de las cosas que nos sirve javascript es para validar formularios del lado del cliente. 
 
 Para acceder a los elementos del formulario, tenemos una opción mucho más elegante que usar `document.getElementById`. Sólo basta con obtener el id del formulario, y tan sólo con los nombres de los campos, podemos acceder a ellos. 
@@ -425,6 +443,7 @@ function validar(e){
 ```
 
 ## Eventos de tiempo: `timming, timmers, timeout e interval`
+
 Nos permite ejecutar cierto código despues que haya pasado cierto tiempo o por intervalos.
 
 - **setTimeout(func, delay)** Ejecuta una función o un bloque de código después de cierto tiempo. 
@@ -448,6 +467,7 @@ document.getElementById('btn-detener').addEventListener('click', function(){
 - **`clearInterval(timeoutId)` - `clearTimeout(timeoutId)`** Estos métodos eliminan los tiempos de retraso que han sido establecido por las funciones `setInterval()` ó `setTimeout()`. Es necesario almacenar los tiempos de espera en una variable para tener una referencia a ellos y poder eliminarlas.
 
 ## Fechas en Javascript
+
 JavaScript tiene la clase `Date()` que nos permite trabajar con fechas y horas. (Date - MDN)[https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date]
 
 Para usar el objeto, sólo debemos instanciar la clase. 
@@ -477,6 +497,7 @@ setInterval(mostrarTiempo, 1000);
 
 
 ## Hoisting
+
 Hoisting se le llama a lo que hace Javascript por defecto, que es mover automaticamente todas las declaraciones al inicio del scrtip actual o funcion.
 
 Por defecto Javascript coloca o revisa primero las declación de variables.
@@ -495,6 +516,7 @@ Sin embargo, por cuestión de orden y para evitar errores, es mejor colocar la d
 > **IMPORTANTE:** Javascript solo posicionara al inicio las "declaraciones", no las "inicializaciones".
 
 ## Objetos en Javascript
+
 Son variables que pueden contener muchos valores. Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre y un valor. Un valor de propiedad puede ser una función, la cual es conocida entonces como un método del objeto.
 
 Con los objetos son muy versátiles, no solo nos permiten crear propiedades, sino que también permite crear métodos.
@@ -516,6 +538,7 @@ document.writeln(johan.bio());
 **Importante** Para acceder a los objetos, si lleva paréntesis es un método, si no lleva, es una propiedad. Además para acceder a la propiedad, se debe usar la palabra reservada `this`. 
 
 ### Constructor de Objetos 
+
 En JavaScript los métodos son objetos como lo es una función normal y se vinculan a un objeto como lo hace una propiedad, lo que significa que se pueden invocar desde "fuera de su contexto".
 
 Lo que consideramos como constructor de objetos, sería en otros lenguajes de programación conocidos como clases.
@@ -542,6 +565,7 @@ Los constructores de objetos son muy útiles ya que nos permite tener predefinid
 
 
 ## Trabajando con Audio y video en JavaScript 
+
 Con Javascript podemos trabajar con los reproductores de audio y video. Con él podemos usar los controles como reproducir, pausar y aumentar o disminuir el volumen. Con eso nos podemos crear nuestro reproductor personalizado.
 
 Algunas Propiedades
@@ -557,3 +581,46 @@ Eventos
 - [Media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events)
 - [Video and audio content](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
+
+## LocalStorage
+
+Nos permite guardar información en la compotadora del usuario que esté visitando la página web. Es como una pequeña base de datos en donde podemos guardar información.
+
+La propiedad localStorage te permite acceder al objeto local Storage. `localStorage` es similar a `sessionStorage`. La única diferencia es que, mientras los datos almacenados en localStorage no tienen fecha de expiración, los datos almacenados en sessionStorage son eliminados cuando finaliza la sesion de navegación - lo cual ocurre cuando se cierra el navegador.
+
+Con sessionStorage los datos persisten sólo en la ventana/tab que los creó, mientras que con localStorage los datos persisten entre ventanas/tabs con el mismo origen. [Window.localStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
+
+
+Para comprobar si el navegador soporta **web Storage**
+```js 
+// Comprobamos que el navegador soporte Local Storage
+if (typeof(Storage) !== "undefined"){
+  document.write('Si soporta');
+
+  // Establecer un nuevo valor
+  localStorage.setItem('nombre', 'Johan Mosquera');
+  // localStorage.nombre = 'Johan';
+} else {
+  document.write('Tu navegador no soporta Web Storage');
+}
+```
+
+Leer y eliminar información de `localStorage` 
+```js 
+/*----- Leer datos de localStorage ------*/
+document.write(localStorage.nombre);
+// document.write(localStorage.getItem("nombre");
+
+/*----- Eliminar el elemento de localStorage -----*/
+// localStorage.removeItem('nombre');
+```
+
+Trabajar con `sessionStorage` es similar a `localStorage`, sólo cambia el comportamiento y claro, el nombre del objeto. 
+```js 
+/*---------------- sessionStorage ------------------*/
+sessionStorage.nombre = 'Johan';
+// document.write(sessionStorage.nombre);
+```
+
+- [Ver LocalStorage](https://developer.mozilla.org/es/docs/Web/API/Storage/LocalStorage)
+- [Ver HTML5 Web Storage](https://www.w3schools.com/htmL/html5_webstorage.asp)

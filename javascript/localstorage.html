@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LocalStorage</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// Comprobamos que el navegador soporte Local Storage
+		if (typeof(Storage) !== "undefined"){
+			// document.write('Si soporta');
+
+			// Establecer un nuevo valor
+			localStorage.setItem('nombre', 'Johan Mosquera');
+			// localStorage.nombre = 'Johan';
+		} else {
+			document.write('Tu navegador no soporta Web Storage');
+		}
+
+
+		/*----- Leer datos de localStorage ------*/
+		document.write(localStorage.nombre);
+		// document.write(localStorage.getItem("nombre");
+
+		/*----- Eliminar el elemento de localStorage -----*/
+		// localStorage.removeItem('nombre');
+
+
+
+		/*---------------- sessionStorage ------------------*/
+		// sessionStorage.nombre = 'Johan';
+		// document.write(sessionStorage.nombre);
+	</script>
+</body>
+</html>
