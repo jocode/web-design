@@ -109,3 +109,87 @@ Además de poder acceder a los elementos del DOM por medio de selectores, tambi�
 - **prev()** Trae el elemento anterior 
 - **nextAll()** Trae todos los elementos siguientes (Hermanos)
 - **prevAll()** Trae todos los elementos anteriores (Hermanos)
+
+## Métodos para filtrar elementos del DOM
+Algunos otros métodos útiles para filtrar los elementos del DOM usando jQuery son:
+- **first()** Regresa el primer elemento de varios seleccionados
+- **last()** Regresa el ultimo de varios seleccionados
+- **eq()** Regresa un elemento en base a un index.
+- **filter()** Nos permite filtrar entre los elementos mediante un criterio.
+- **not()** Nos regresa los elementos que no concuerdan con el criterio.
+
+## Eventos
+Son acciones que se ejecutan cuando el usuario interactúa con la pantalla. 
+
+Las funciones **callback** son aquellas que se ejecutan después de una determinada acción, como un evento o alguna funcionalidad.
+
+> Importante. Si se va a trabajar con un elemento varias veces, es recomendable cachar la ubicación con una variable, para evitar estar buscando el elemento cada vez que se solicite. Esto denota una mejora en el rendimiento de nuestro sitio.
+
+Hay dos formas de ejecutar un evento: 
+```js 
+var boton = $('#boton');
+
+// Usando el evento directamente
+boton.click(saludo);
+
+// Usando el método on y se le pasa por parámetro el evento y la función a ejecutar
+boton.on('', saludo);
+
+```
+
+Para prevenir el comportamiento de los botones, usamos la función *preventDefault()*, y debemos colocar un parámetro para que pueda funcionar.
+```js 
+$('a').on('click', function(e){
+	console.log('Enlace Desactivado');
+	e.preventDefault();
+});
+```
+
+## Palabra reservada `this`
+
+La palabra reservada `this` tiene la misma función que en javascript, solo cambia en la declaración al estar usando jQuery. 
+
+La declaración es **`$(this).evento()`**. En este caso this haría referencia a un objeto del DOM.
+
+```
+$('.caja').on('click', function(){
+	$(this).toggleClass('color');
+});
+```
+
+## Animaciones con jQuery 
+
+Con jQuery podemos crear animaciones fácilmente. Para ello debemos usar el método **animate()**. La sintaxis es la siguiente: 
+```js 
+$(selector).animate({parametros}, velocidad, callback);
+```
+
+Ejemplo de animaciones 
+```js 
+$('#boton').on('click', function(){
+$('#caja').animate({
+	// width: '300px'
+	// opacity: '0.2'
+
+	// marginLeft: '20px'
+	marginLeft: '+=50px'
+}, 300);
+});
+```
+
+## Método `stop()`
+Este método permite detener las animaciones que se estén ejecutando con jQuery.
+La declaración de este método es la siguiente: 
+```js 
+$(selector).stop(limpiarAnimaciones, saltaralFinal)
+```
+
+Los parámetros que recibe son booleanos. Lo que nos hace esta función es detener una o varias animaciones de acuerdo a los parámetros que le pasemos.
+
+```js 
+$('#parar').on('click', function(){
+	$('.caja').stop(false, true);
+});
+```
+
+
