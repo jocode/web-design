@@ -192,4 +192,103 @@ $('#parar').on('click', function(){
 });
 ```
 
+## Callbacks
 
+Son funciones que se ejecutan después de una determinada acción, como una animación, evento, etc.
+
+Si no se ejecutaran callback, la ejecución del script se vería afectado y no veríamos coasa como las animaciones. 
+
+Un ejemplo claro de callback en jQuery es la declaración inicial: 
+```js 
+$(document).ready(function(){
+	// Código a ejecutar
+});
+```
+El código que esta dentro de la función anónima se ejecuta luego de que el documento esté listo, es decir se haya cargado todo en pantalla.
+
+## Manipulación del DOM 
+
+Para la manipulación de Document Object Model, tenemos unos métodos muy útiles que podemos usar: 
+
+Recordar que para usar estos métodos, debemos acceder al elemento usando la sintaxis de jQuery 
+```js 
+$(selector).metodo();
+```
+
+- **text(value)** Obtiene el texto del elemento, si le pasamos por parámetro el texto se modificará
+- **html(value)** Obtiene o modifica el contenido HTML
+- **val()** Obtiene el atributo value de un elemento
+- **attr(attr, value)** Modificamos un atributo al elemento
+- **attr({object})** Podemos modificar varios atributos usando la notación de objeto en javascript
+
+## Agregar elementos al DOM 
+
+Recordando los pasos que de javascript
+1. Creamos el elemento 
+2. Definimos los atributos 
+3. Le colocamos texto 
+4. Lo agregamos a un contenedor 
+
+Pues con jQuery es similar pero nos ahorramos más código. 
+Para crear un elemento, lo hacemos de la misma forma como accedemos a un elemento. 
+```js 
+var caja = $('<div></div>').attr('class', 'caja').text(contador);
+```
+En este caso creamos la caja, le dimos atributos y le colocamos un texto, solo falta agregarla al contenedor, y para eso tenemos varios métodos.
+
+```js 
+var contenedor = $('#contenedor');
+contenedor.append(caja);
+```
+
+- **append()** Agrega un elemento al contenedor al final de cada elemento.
+- **prepend()** Agrega un elemento al contenedor al principio de cada elemento.
+- **before()** Agrega un elemento antes del contenedor
+- **after()** Agrega un elemento después del contenedor
+
+
+## Eliminando elementos del DOM 
+
+Para eliminar elementos del DOM, tenemos estos métodos: 
+```js 
+$('#contenedor').remove();
+```
+- **remove()** Elimina el elemento y sus elementos hijo.
+- **children().remove()** Elimina el elemento o los elementos hijos del elemento seleccionado.
+- **empty()** Elimina los elementos hijos del elemento seleccionado.
+
+
+## jQuery - Trabajando con CSS 
+
+Los métodos que nos permite trabajar con los estilos css son: 
+```js 
+$('#boton').on('click', function(){
+	$(this).toggleClass('naranja');
+});
+```
+- **addClass(className)** Agrega el nombre de la clase al elemento seleccionado. 
+- **removeClass(className)** Elimina el nombre de la clase que hemos pasado por parámetro 
+- **toggleClass(className)** Agrega o elimina el nombre de la clase. Si está la elimina, y si no la tiene la agrega.
+- **css(property, value)** Agrega una propiedad css al elemento 
+- **css({object})** Permite agregar varias propiedades css al elemento que hemos seleccionado. 
+
+## Métodos útiles para trabajar con medidas 
+
+Métodos que podemos usar para calcular las medidas de los elementos del documento `html`. 
+
+```js 
+var titulo = $('#titulo');
+console.log(titulo.width());
+console.log(titulo.height());
+```
+- Ancho `width`
+	- **width()** Calcula el ancho del elemento
+	- **innerWidth()** Calcula el ancho del elemento + padding
+	- **outerWidth()** Calcula el ancho del elemento + padding + borde
+	- **outerWidth(true)** Calcula el ancho del elemento + padding + borde + margin
+
+- Alto `height`
+	- **height()** Calcula el alto del elemento
+	- **innerHeight()** Calcula el alto del elemento + padding
+	- **outerHeight()** Calcula el alto del elemento + padding + borde
+	- **outerHeight(true)** Calcula el alto del elemento + padding + borde + margin
