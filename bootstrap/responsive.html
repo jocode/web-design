@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Helpers Clases - Responsive</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .caja {
+            background-color: #21295c;
+            color: #fff;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<!-- Screen Size 	Class
+    Hidden
+Hidden on all 	.d-none
+Hidden only on xs 	.d-none .d-sm-block
+Hidden only on sm 	.d-sm-none .d-md-block
+Hidden only on md 	.d-md-none .d-lg-block
+Hidden only on lg 	.d-lg-none .d-xl-block
+Hidden only on xl 	.d-xl-none
+
+    Visible
+Visible on all 	.d-block
+Visible only on xs 	.d-block .d-sm-none
+Visible only on sm 	.d-none .d-sm-block .d-md-none
+Visible only on md 	.d-none .d-md-block .d-lg-none
+Visible only on lg 	.d-none .d-lg-block .d-xl-none
+Visible only on xl 	.d-none .d-xl-block -->
+
+<body>
+    <h1 class="text-center">Responsive utilities</h1>
+    <div class="container">
+        <div class="row">
+            <div class="caja col-sm-12">
+                <h2 class="d-block d-sm-none">Tamaño extra pequeño</h2>
+                <h2 class="d-none d-sm-block d-md-none">Tamaño pequeño</h2>
+                <h2 class="d-none d-md-block d-lg-none">Tamaño mediano</h2>
+                <h2 class="d-none d-lg-block d-xl-none">Tamaño grande</h2>
+                <h2 class="d-none d-xl-block">Tamaño extra grande</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
