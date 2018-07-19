@@ -34,7 +34,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('html, body').animate({
 			scrollTop: acercaDe - 250
-		}, 500);
+		}, 1000);
 	});
 
 	$('#btn-menu').on('click', function(e){

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid de Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .encabezado {
+            background-color: #452745;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .main {
+            background-color: #f2f2f2;
+            margin-bottom: 20px;
+        }
+
+        aside {
+            background-color: #FF5F49;
+            color: #fff;
+        }
+
+        .widgets {
+            margin-bottom: 20px;
+        }
+
+        .widget {
+            background: #f2f2f2;
+        }
+
+        .color {
+            background: #d2d2d2;
+        }
+
+        footer {
+            background: #452745;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<!--
+	Medidas 			Dispositivo
+	==============================================
+	xs - Extra Small 	Telefonos y MENOS de 768px
+	sm - Small  		Tablets y MAS de 768px
+	md - Medium  		Computadoras y MAS de 992px
+	lg - Large	 		Computadoras, Pantallas y MAS de 1200px
+-->
+
+<body>
+    <div class="container">
+        <header class="row">
+            <div class="encabezado col-md-12">
+                <h1>Header</h1>
+            </div>
+        </header>
+        <main class="main row">
+            <article class="col-xs-1 col-sm-6 col-md-9 col-lg-9">
+                <h2>Artículo</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, ad commodi! Voluptatibus, aperiam cumque incidunt
+                    magnam quod in commodi nemo explicabo saepe dolorem eius nobis, esse nesciunt numquam odio ad.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, ad commodi! Voluptatibus, aperiam cumque incidunt
+                    magnam quod in commodi nemo explicabo saepe dolorem eius nobis, esse nesciunt numquam odio ad.</p>
+            </article>
+            <aside class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
+                <h3>Sidebar</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque commodi quos error nesciunt perferendis.
+                    Vitae adipisci vel architecto iure blanditiis quos praesentium autem aliquid, beatae, voluptatem eligendi
+                    repellendus alias. Eligendi!</p>
+            </aside>
+        </main>
+
+        <section class="widgets row">
+            <div class="widget col-sm-6 col-md-3">
+                <h3>Widget</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore blanditiis quo dicta quae? Optio, voluptate
+                    odit, aliquam porro delectus numquam ad vero quasi assumenda illo excepturi! Eveniet perspiciatis illum
+                    exercitationem?</p>
+            </div>
+            <div class="color col-sm-6 col-md-3">
+                <h3>Widget</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore blanditiis quo dicta quae? Optio, voluptate
+                    odit, aliquam porro delectus numquam ad vero quasi assumenda illo excepturi! Eveniet perspiciatis illum
+                    exercitationem?</p>
+            </div>
+            <div class="widget col-sm-6 col-md-3">
+                <h3>Widget</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore blanditiis quo dicta quae? Optio, voluptate
+                    odit, aliquam porro delectus numquam ad vero quasi assumenda illo excepturi! Eveniet perspiciatis illum
+                    exercitationem?</p>
+            </div>
+            <div class="color col-sm-6 col-md-3">
+                <h3>Widget</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore blanditiis quo dicta quae? Optio, voluptate
+                    odit, aliquam porro delectus numquam ad vero quasi assumenda illo excepturi! Eveniet perspiciatis illum
+                    exercitationem?</p>
+            </div>
+        </section>
+
+        <footer class="row">
+            <div class="col-md-12"><h4>Footer</h4></div>
+        </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
