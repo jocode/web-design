@@ -130,3 +130,23 @@ Hay dos clases interesantes que podemos usar en los inputs para las validaciones
     </div>
 </div
 ```
+
+## Dropdowns
+
+Los dropdowns son botones diseñados para los menús de navegación.
+Es importante incluir el archivo `bootstrap.bundle.js` antes de `bootstrap.min.js` para que pueda funcionar los menús.
+
+Para crear botones dropdowns usamos el siguiente código.
+
+```html
+<div class="btn-group">
+<button class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown link
+</button>
+<div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+</div>
+</div>
+```
