@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrollspy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            position: relative;
+            padding-top: 70px;
+        }
+        section {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="menucito" class="navbar fixed-top navbar-expand navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#who" class="nav-link">who</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#contactos" class="nav-link">Contactos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div data-spy="scroll" data-target="#menucito" data-offset="0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <section id="home">
+                        <h2>Seccion #1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                    </section>
+                    <section id="who">
+                        <h2>Seccion #2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                    </section>
+                    <section id="contactos">
+                        <h2>Seccion #3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus magnam odit ipsam accusantium quasi. Maiores soluta dignissimos sed eveniet incidunt ea culpa, illo, quam minus ducimus voluptate facilis accusamus possimus itaque rerum saepe pariatur voluptas commodi molestiae earum quis odit. Impedit fuga molestias, quae tempora assumenda eius suscipit exercitationem.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
