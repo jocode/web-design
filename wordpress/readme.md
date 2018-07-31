@@ -46,3 +46,15 @@ Ya al finalizar los pasos, puedes acceder al dashboard o panel de administració
 Debes digitar un usuario y una contraseña para que puedas acceder al panel de control. Pueden ser:
 - usuario: `admin`
 - contraseña: `esunacontraseñafuerte`
+
+## Usuarios en wordpress
+
+Wordpress cuenta con roles, en los cuales cada uno tiene unos ciertos privilegios dentro del sistema.
+
+Podemos ir a la página [Roles y capacidades](https://codex.wordpress.org/es:Roles_y_Capacidades) para saber qué permisos tiene cada usuario. Los tipos de usuarios por defecto son:
+- **Super Admin** - Quien cuenta con acceso a la característica de administración de la red de blogs completa. (Referencia: Crear una red -en inglés).
+- **Administrador** - Quien tiene acceso a todas las características de administración de un sitio en particular.
+- **Editor** - Quien puede publicar y editar entradas, propias y de otros usuarios.
+- **Autor** - Quien puede publicar y editar sus propias entradas.
+- **Colaborador** - Quien puede escribir y editar sus propias entradas pero no publicarlas.
+- **Subscriptor** - Quien solamente puede editar su perfil.
