@@ -58,3 +58,8 @@ Podemos ir a la página [Roles y capacidades](https://codex.wordpress.org/es:Rol
 - **Autor** - Quien puede publicar y editar sus propias entradas.
 - **Colaborador** - Quien puede escribir y editar sus propias entradas pero no publicarlas.
 - **Subscriptor** - Quien solamente puede editar su perfil.
+
+
+## Creación de un Tema en wordpress
+
+Para ver la descripción general para la creación de un tema para wordpress, ver la carpeta [**miTheme**](wp-content/themes/miTheme) dentro del directorio **themes**.
